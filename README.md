@@ -33,4 +33,19 @@
 -  You should have market or real-world research that proves your idea has REAL value to people.
     -   Stock market is a 34 Trillion Dollar industry, Dow alone has a market cap of 22 Billion Dollors , according to a recent a survey , traders would likely use tools which can help facilitate increased profits, however, this enterprise software has a steep learning curve that deters beginners and intermidiete users alike . What the web-app's vision is to provide an accurate sentiment analysis of a stock at with minimum input . 
 -  You should perform research on other web / mobile applications in their app’s domain.
-    - There are a ton of trading bot and sentiment analysis in the market . Stock-Twits is one , although a viable alternative , it pulls data from the users themselves, therefore , it can mudge or manipulate the "sentiment" . 
+    - There are a ton of trading bot and sentiment analysis in the market . Stock-Twits is one , although a viable alternative , it pulls data from the users themselves, therefore , it can mudge or manipulate the "sentiment" . Some products charge as much as hundreds of dollars for a trading bot . 
+
+
+## Minimum Viable Product
+>  ### Introduction : 
+    -  The MVP consist of 4 parts , this is to ensure completion of the project . Although at release 1.0 , we anticipate a fully working application with the following features :
+
+> ### 1 . User Authentication :
+    -  A user needs to be able to join and provide their information , This will be enabled using MONGODB . This also allows users to add in a ticker in their watch list . 
+> ### 2. Diplay of Stock Charts :
+    - The basic display of stock charts using REACTJS framework, be it real time or static . Web-sockets is also a technology that needs to be incorporated for a real time display of prices .
+> ### 3 . Stock / Cryptocurrency Information : 
+    - Pulling from an API , the application must have an ability to display the information (market cap , high low , float) of the stock . 
+> ### 4 . Sentiment Analysis :
+    - This is the main feature of the application , the user can define a 3 parameters , (Ticker) , (Key-Word) , (Grade) , using a scrapper , it will analyze articles from news sites and the market trend to gauge if it is a buy or sell . 
+
