@@ -43,7 +43,7 @@
 > ### 1 . User Authentication :
 -  A user needs to be able to join and provide their information , This will be enabled using MONGODB . This also allows users to add in a ticker in their watch list . 
 > ### 2. Diplay of Stock Charts :
-    - The basic display of stock charts using REACTJS framework, be it real time or static . Web-sockets is also a technology that needs to be incorporated for a real time display of prices .
+- The basic display of stock charts using REACTJS framework, be it real time or static . Web-sockets is also a technology that needs to be incorporated for a real time display of prices .
 > ### 3 . Stock / Cryptocurrency Information : 
 - Pulling from an API , the application must have an ability to display the information (market cap , high low , float) of the stock . 
 > ### 4 . Sentiment Analysis :
