@@ -28,10 +28,9 @@
 
 ## PROJECT SPECIFICATIONS
 >  ### What’s expected for the project:
-• Whatever you build should have utility.
-• You should have market or real-world research that proves your idea has REAL value to people.
-• You should perform research on other web / mobile applications in their app’s domain.
-• You should put serious time and thought into this.
-• You should report problems you’re facing along the way.
-• You should use some form of project management system.
-• You should dig deep into documentation and external resources to find the tools they need.
+- Whatever you build should have utility: 
+    -   Use case wise, The main use for this application is to tract the sentiment of the market based on current trending news . Trend analysis is one of the best tool beginner traders are looking for , although sentiment analysis tools are available , it is quite expensive and complicated for beginner traders . This application will solve the complexity of sentiment analysis by making it as simple as having 3 inputs and a click of a button . 
+-  You should have market or real-world research that proves your idea has REAL value to people.
+    -   Stock market is a 34 Trillion Dollar industry, Dow alone has a market cap of 22 Billion Dollors , according to a recent a survey , traders would likely use tools which can help facilitate increased profits, however, this enterprise software has a steep learning curve that deters beginners and intermidiete users alike . What the web-app's vision is to provide an accurate sentiment analysis of a stock at with minimum input . 
+-  You should perform research on other web / mobile applications in their app’s domain.
+    - There are a ton of trading bot and sentiment analysis in the market . Stock-Twits is one , although a viable alternative , it pulls data from the users themselves, therefore , it can mudge or manipulate the "sentiment" . 
