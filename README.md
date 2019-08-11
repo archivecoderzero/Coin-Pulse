@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to Coin Pulse</h1>
+<h1 align="center">Coin-Pulse</h1>
 <p align="center" >Cryptocurrency Tracker / Sentiment Bot
 <p align="center" >Final Project : UW Coding Bootcamp 2019
 
