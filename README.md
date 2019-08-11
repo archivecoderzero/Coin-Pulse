@@ -7,11 +7,19 @@
 <h3 align="center">Wireframe: </h3>
 <p align="center" >
 <h3 align="center">Landing Page:  </h3>
+<p align="center" >
   <img alt="Version" src="https://github.com/archivecoderzero/Bit-Pulse/blob/master/readme_img/0.PNG?raw=true">
+</p>
 <h3 align="center">About Page</h3>
+<p align="center" >
   <img alt="Version" src="https://github.com/archivecoderzero/Bit-Pulse/blob/master/readme_img/1.PNG?raw=true">
+</p>
+<p align="center" >
 <h3 align="center">Meet The Devs Page</h3>
   <img alt="Version" src="https://github.com/archivecoderzero/Bit-Pulse/blob/master/readme_img/2.PNG?raw=true">
+</p>
+
+<p align="center" >
 <h3 align="center">Sign-Up Page</h3>
   <img alt="Version" src="https://github.com/archivecoderzero/Bit-Pulse/blob/master/readme_img/3.PNG?raw=true">
 </p>
