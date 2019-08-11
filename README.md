@@ -1,9 +1,7 @@
 <h1 align="center">Welcome to Coin Pulse</h1>
 <p align="center" >Cryptocurrency Tracker / Sentiment Bot
+<img align="center" alt="Version" src="https://img.shields.io/npm/v/homework.svg">
 
-<p>
-  <img align="center" alt="Version" src="https://img.shields.io/npm/v/homework.svg">
-</p>
 
 
 ## WireFrame : 
