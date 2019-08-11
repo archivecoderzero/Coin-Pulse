@@ -38,14 +38,14 @@
 
 ## Minimum Viable Product
 >  ### Introduction : 
-    -  The MVP consist of 4 parts , this is to ensure completion of the project . Although at release 1.0 , we anticipate a fully working application with the following features :
+-  The MVP consist of 4 parts , this is to ensure completion of the project . Although at release 1.0 , we anticipate a fully working application with the following features :
 
 > ### 1 . User Authentication :
-    -  A user needs to be able to join and provide their information , This will be enabled using MONGODB . This also allows users to add in a ticker in their watch list . 
+-  A user needs to be able to join and provide their information , This will be enabled using MONGODB . This also allows users to add in a ticker in their watch list . 
 > ### 2. Diplay of Stock Charts :
     - The basic display of stock charts using REACTJS framework, be it real time or static . Web-sockets is also a technology that needs to be incorporated for a real time display of prices .
 > ### 3 . Stock / Cryptocurrency Information : 
-    - Pulling from an API , the application must have an ability to display the information (market cap , high low , float) of the stock . 
+- Pulling from an API , the application must have an ability to display the information (market cap , high low , float) of the stock . 
 > ### 4 . Sentiment Analysis :
-    - This is the main feature of the application , the user can define a 3 parameters , (Ticker) , (Key-Word) , (Grade) , using a scrapper , it will analyze articles from news sites and the market trend to gauge if it is a buy or sell . 
+- This is the main feature of the application , the user can define a 3 parameters , (Ticker) , (Key-Word) , (Grade) , using a scrapper , it will analyze articles from news sites and the market trend to gauge if it is a buy or sell . 
 
