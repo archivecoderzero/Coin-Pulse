@@ -1,5 +1,5 @@
 <h1 align="center">Welcome to Coin Pulse</h1>
-<p align="center" >Cryptocurrency Tracker / Sentiment Bot</p>
+<p align="center" >Cryptocurrency Tracker / Sentiment Bot
 
 <p>
   <img align="center" alt="Version" src="https://img.shields.io/npm/v/homework.svg">
@@ -20,3 +20,5 @@
 
 > ### Sign-Up : 
   <img align="center" alt="Version" src="https://github.com/archivecoderzero/Bit-Pulse/blob/master/readme_img/3.PNG?raw=true">
+
+</p>
