@@ -7,6 +7,7 @@
 ## WireFrame : 
 
 <p align="center" >
+
 > ### Landing Page : 
   <img alt="Version" src="https://github.com/archivecoderzero/Bit-Pulse/blob/master/readme_img/0.PNG?raw=true">
 
