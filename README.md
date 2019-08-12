@@ -25,7 +25,6 @@
   <img alt="Version" src="https://github.com/archivecoderzero/Bit-Pulse/blob/master/readme_img/3.PNG?raw=true">
 </p>
 
-
 ## PROJECT SPECIFICATIONS
 >  ### What’s expected for the project:
 - Whatever you build should have utility: 
