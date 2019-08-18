@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Index from "./pages/Index";
 import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+
 import Dashboard from "./pages/Login";
 import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
@@ -19,7 +21,7 @@ function App() {
           <Route exact path="/" component={Index} />
           <Route exact path="/dashboard" component={Dashboard} />
           <Route exact path="/login" component={Login} />
-          <Route exact path="/signup" component={Dashboard} />
+          <Route exact path="/signup" component={Signup} />
           <Route exact path="/profile/:id" component={Detail} />
           <Route exact path="/algo/:id" component={Detail} />
           <Route exact path="/currency/:id" component={Detail} />
