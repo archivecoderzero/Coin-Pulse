@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 // INDEX COMPONENT ----> START
 import MainCard from "../components/IndexComponents/MainCard";
 import AboutCard from "../components/IndexComponents/AboutCard";

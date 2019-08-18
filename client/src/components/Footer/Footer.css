@@ -1,0 +1,13 @@
+
+.navbar.navbar-expand-lg.navbar-dark.bg-primary.footer{
+	width: 100%;
+	position: relative;
+	bottom: -50px;
+}
+#footer{
+	text-align: center;
+	padding:0 px;
+	font-size: 10px;
+}
+
+
