@@ -3,6 +3,9 @@ import API from "../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import DashboardMainCard from "../components/DashboardComponents/DashboardMainCard"
+import DashboardAsideLeft from "../components/DashboardComponents/DashboardAsideLeft"
+import DashboardAsideRight from "../components/DashboardComponents/DashboardAsideRight"
+
 import CryptoCard from "../components/DashboardComponents/CryptoCard"
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
@@ -59,7 +62,6 @@ class Books extends Component {
     return (
       <Container fluid>
         <DashboardMainCard>
-
           <CryptoCard
             currencyName='Bitcoin'
             currencyPrice='$8850.32'
@@ -125,10 +127,32 @@ class Books extends Component {
             chartData={[5, 5, 664, 9, 7, 55, 6, 1, 99, 6, 3, 4, 5, 6, 6]}
             chartColor='#FF00FF'
           />
-
-
         </DashboardMainCard>
+
+<Row>
+<Col size="md-6 sm-12">
+<DashboardAsideLeft>
+  <h3>Trending Articles</h3>
+</DashboardAsideLeft>
+</Col>
+
+<Col size="md-3 sm-12">
+<DashboardAsideRight>
+  <h3>Top Traders</h3>
+</DashboardAsideRight>
+</Col>
+
+<Col size="md-3 sm-12">
+<DashboardAsideRight>
+  <h3>Search</h3>
+</DashboardAsideRight>
+</Col>
+
+</Row>
+
       </Container>
+
+
     );
   }
 }
