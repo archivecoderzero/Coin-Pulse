@@ -134,21 +134,53 @@ class Books extends Component {
 <DashboardAsideLeft>
   <h3>Trending Articles</h3>
 </DashboardAsideLeft>
+
 </Col>
 
 <Col size="md-3 sm-12">
 <DashboardAsideRight>
-  <h3>Top Traders</h3>
+  <h3>Top Traders : </h3>
+  <ul>
+    <li>Trader 1 : 99% Success Rate : 10000 Bit Points </li>
+    <li>Trader 2 : 99% Success Rate : 10000 Bit Points </li>
+    <li>Trader 3 : 99% Success Rate : 10000 Bit Points </li>
+    <li>Trader 4 : 99% Success Rate : 10000 Bit Points </li>
+    <li>Trader 5 : 99% Success Rate : 10000 Bit Points </li>
+    <li>Trader 6 : 99% Success Rate : 10000 Bit Points </li>
+    <li>Trader 7 : 99% Success Rate : 10000 Bit Points </li>
+    <li>Trader 8 : 99% Success Rate : 10000 Bit Points </li>
+  </ul>
 </DashboardAsideRight>
 </Col>
 
-<Col size="md-3 sm-12">
+
+<Col size="md-3 sm-6">
+
 <DashboardAsideRight>
   <h3>Search</h3>
+  <Form>
+  <Form.Group controlId="Search">
+    <Form.Label>Search Cryptocurrency</Form.Label>
+    <Form.Control type="text" placeholder="Search"  />
+    <Form.Text className="text-muted">
+    </Form.Text>
+<br></br>
+    <Button variant="primary" type="button">
+    Search <i class="fas fa-search"></i>
+  </Button>
+  </Form.Group>
+  </Form>
+
+
+
+
 </DashboardAsideRight>
+
+
 </Col>
 
 </Row>
+
 
       </Container>
 
