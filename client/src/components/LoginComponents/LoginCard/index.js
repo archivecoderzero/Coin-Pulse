@@ -7,6 +7,7 @@ function LoginCard({children}) {
       className="jumbotron"
     >
       {children}
+      
     </div>
   );
 }

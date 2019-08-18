@@ -64,46 +64,52 @@ class Books extends Component {
       <Container fluid>
         <SignupCard>
           <h1> Sign-Up</h1>
-        <Form>
+          <Form>
 
-  <Form.Row>
-    <Form.Group as={Colx} controlId="formGridEmail">
-      <Form.Label>Email</Form.Label>
-      <Form.Control type="email" placeholder="Enter email" />
-    </Form.Group>
+            <Form.Row>
+              <Form.Group as={Colx} controlId="formGridEmail">
+                <Form.Label>Email</Form.Label>
+                <Form.Control type="email" placeholder="Enter email" />
+              </Form.Group>
 
-    <Form.Group as={Colx} controlId="formGridPassword">
-      <Form.Label>Password</Form.Label>
-      <Form.Control type="password" placeholder="Password" />
-    </Form.Group>
-  </Form.Row>  
-  
-  <Form.Row>
-    <Form.Group as={Colx} controlId="formGridEmail">
-      <Form.Label>Username</Form.Label>
-      <Form.Control type="email" placeholder="Enter email" />
-    </Form.Group>
+              <Form.Group as={Colx} controlId="formGridPassword">
+                <Form.Label>Password</Form.Label>
+                <Form.Control type="password" placeholder="Password" />
+              </Form.Group>
+            </Form.Row>
 
-    <Form.Group as={Colx} controlId="formGridPassword">
-      <Form.Label>Your Name</Form.Label>
-      <Form.Control type="text" placeholder="Your Name" />
-    </Form.Group>
+            <Form.Row>
+              <Form.Group as={Colx} controlId="formGridEmail">
+                <Form.Label>Username</Form.Label>
+                <Form.Control type="email" placeholder="Enter email" />
+              </Form.Group>
 
-
-  </Form.Row>
+              <Form.Group as={Colx} controlId="formGridPassword">
+                <Form.Label>Your Name</Form.Label>
+                <Form.Control type="text" placeholder="Your Name" />
+              </Form.Group>
 
 
+            </Form.Row>
 
-  <Form.Group as={Colx} controlId="formGridPassword">
-      <Form.Label>About</Form.Label>
-      <Form.Control type="text" placeholder="Password" />
-    </Form.Group>
-    
 
-  <Button variant="primary" type="submit">
-    Submit
-  </Button>
-</Form>
+
+            <Form.Group as={Colx} controlId="formGridPassword">
+              <Form.Label>About</Form.Label>
+              <Form.Control type="text" placeholder="Password" />
+            </Form.Group>
+
+{/* UNCOMMENT THIS START ----------------> */}
+            {/* <Button variant="primary" type="button">
+              Submit
+  </Button> */}
+{/* UNCOMMENT THIS END----------------> */}
+
+{/* REMOVE THIS ON ACTUAL APP START ----------> */}
+              <a className="nav-link" href="/dashboard"><button type="button" className="btn btn-dark ">Submit</button></a>
+{/* REMOVE THIS ON ACTUAL APP START ---------->*/}
+
+          </Form>
 
         </SignupCard>
       </Container>

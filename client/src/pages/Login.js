@@ -78,9 +78,17 @@ class Books extends Component {
   <Form.Group controlId="formBasicCheckbox">
     <Form.Check type="checkbox" label="Check me out" />
   </Form.Group>
-  <Button variant="primary" type="submit">
-    Submit
-  </Button>
+
+{/* UNCOMMENT THIS START ----------------> */}
+            {/* <Button variant="primary" type="button">
+              Submit
+  </Button> */}
+{/* UNCOMMENT THIS END----------------> */}
+
+{/* REMOVE THIS ON ACTUAL APP START ----------> */}
+              <a className="nav-link" href="/dashboard"><button type="button" className="btn btn-dark ">Submit</button></a>
+{/* REMOVE THIS ON ACTUAL APP START ---------->*/}
+
 </Form>
 
         </LoginCard>
