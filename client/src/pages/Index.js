@@ -1,6 +1,11 @@
 import React, { Component } from "react";
-import DeleteBtn from "../components/DeleteBtn";
-import MainCard from "../components/MainCard";
+// INDEX COMPONENT ----> START
+import MainCard from "../components/IndexComponents/MainCard";
+import AboutCard from "../components/IndexComponents/AboutCard";
+import Devs from "../components/IndexComponents/DevsCard";
+
+// INDEX COMPONENT ----> START
+
 import API from "../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
@@ -56,8 +61,11 @@ class Books extends Component {
   render() {
     return (
       <Container fluid>
+        <br></br>
+
+        {/* MAIN CARD START -----------------------> */}
+
         <Row>
-          
         <br></br>
           <Col size="md-12">
             <MainCard>
@@ -66,11 +74,14 @@ class Books extends Component {
           </Col>
           <br></br>
         </Row>
+
+        {/* MAIN CARD END -----------------------> */}
+
         <Row>
           <Col size="md-12">
-            <MainCard>
+            <AboutCard>
               <h1>ABOUT</h1>
-            </MainCard>
+            </AboutCard>
           </Col>
           <br></br>
         </Row>

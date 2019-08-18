@@ -10,7 +10,7 @@ function App() {
   return (
     <Router>
       <div>
-        <Nav />
+        <Nav sticky="top" />
         <Switch>
           <Route exact path="/" component={Index} />
           <Route exact path="/dashboard" component={Dashboard} />
