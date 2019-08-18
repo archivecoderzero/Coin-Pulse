@@ -1,6 +1,6 @@
 import React from "react";
 
-function DevsCard({ children }) {
+function SignupCard({ children }) {
   return (
     <div
       style={{ height: 750, clear: "both", paddingTop: 300, textAlign: "center" }}
@@ -11,4 +11,4 @@ function DevsCard({ children }) {
   );
 }
 
-export default DevsCard;
+export default SignupCard;
