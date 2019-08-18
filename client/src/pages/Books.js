@@ -92,6 +92,8 @@ class Books extends Component {
             <Jumbotron>
               <h1>Books On My List</h1>
             </Jumbotron>
+            </Col>
+            </Row>
             {this.state.books.length ? (
               <List>
                 {this.state.books.map(book => (
@@ -108,8 +110,7 @@ class Books extends Component {
             ) : (
               <h3>No Results to Display</h3>
             )}
-          </Col>
-        </Row>
+
       </Container>
     );
   }

@@ -1,10 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+// INDEX ROUTES
 import Index from "./pages/Index";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+// MAIN DASHBOARD
+import Dashboard from "./pages/Dashboard";
 
-import Dashboard from "./pages/Login";
+
 import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";

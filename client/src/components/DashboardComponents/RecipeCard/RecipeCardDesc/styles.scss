@@ -1,0 +1,42 @@
+.recipe-card-desc {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  color: rgba(0, 0, 0, 0.75);
+
+
+  div,
+  a {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    flex: 1 1 auto;
+    border: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:hover {
+      background: #F8BBD0;
+    }
+  }
+
+  .title {
+    display: inline;
+    text-align: center;
+  }
+
+  a:hover {
+    cursor: pointer;
+  }
+
+  .title {
+    font-size: 1.25rem;
+  }
+
+  span.fa:not(.fa-heart-o) {
+    margin-right: 0.25rem;
+  }
+}

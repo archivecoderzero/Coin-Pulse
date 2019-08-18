@@ -1,0 +1,16 @@
+.recipe-card{
+  position:relative;
+  display:flex;
+  flex-flow:column;
+  width: 450px;
+  overflow: hidden;
+
+  font-size: 1rem;
+  background-color:#FCE4EC;
+  color:#546E7A;
+}
+
+a.recipe-card-link{
+  display:flex;
+  text-decoration:none;
+}
