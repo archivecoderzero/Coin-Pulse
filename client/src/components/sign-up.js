@@ -24,7 +24,7 @@ class Signup extends Component {
 		event.preventDefault()
 
 		//request to server to add a new username/password
-		axios.post('/user/', {
+		axios.post('/signup', {
 			username: this.state.username,
 			password: this.state.password
 		})
@@ -32,6 +32,7 @@ class Signup extends Component {
 				console.log(response)
 				if (!response.data.errmsg) {
 					console.log('successful signup')
+					window.location.replace("/login");
 					this.setState({ //redirect to login page
 						redirectTo: '/login'
 					})

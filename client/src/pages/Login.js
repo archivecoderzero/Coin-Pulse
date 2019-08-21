@@ -63,33 +63,33 @@ class Books extends Component {
       <Container fluid>
         <LoginCard>
         <Form>
-  <Form.Group controlId="formBasicEmail">
-  <br></br>
-    <Form.Label>Email address</Form.Label>
-    <Form.Control type="email" placeholder="Enter email" />
-    <Form.Text className="text-muted">
-      We'll never share your email with anyone else.
-    </Form.Text>
-  </Form.Group>
-  <Form.Group controlId="formBasicPassword">
-    <Form.Label>Password</Form.Label>
-    <Form.Control type="password" placeholder="Password" />
-  </Form.Group>
-  <Form.Group controlId="formBasicCheckbox">
-    <Form.Check type="checkbox" label="Check me out" />
-  </Form.Group>
+          <Form.Group controlId="formBasicEmail">
+          <br></br>
+            <Form.Label>Email address</Form.Label>
+            <Form.Control type="email" placeholder="Enter email" />
+            <Form.Text className="text-muted">
+              We'll never share your email with anyone else.
+            </Form.Text>
+          </Form.Group>
+          <Form.Group controlId="formBasicPassword">
+            <Form.Label>Password</Form.Label>
+            <Form.Control type="password" placeholder="Password" />
+          </Form.Group>
+          <Form.Group controlId="formBasicCheckbox">
+            <Form.Check type="checkbox" label="Check me out" />
+          </Form.Group>
 
-{/* UNCOMMENT THIS START ----------------> */}
-            {/* <Button variant="primary" type="button">
-              Submit
-  </Button> */}
-{/* UNCOMMENT THIS END----------------> */}
+            {/* UNCOMMENT THIS START ----------------> */}
+                        {/* <Button variant="primary" type="button">
+                          Submit
+              </Button> */}
+            {/* UNCOMMENT THIS END----------------> */}
 
-{/* REMOVE THIS ON ACTUAL APP START ----------> */}
-              <a className="nav-link" href="/dashboard"><button type="button" className="btn btn-dark ">Submit</button></a>
-{/* REMOVE THIS ON ACTUAL APP START ---------->*/}
+            {/* REMOVE THIS ON ACTUAL APP START ----------> */}
+                          <a className="nav-link" href="/dashboard"><button type="button" className="btn btn-dark ">Submit</button></a>
+            {/* REMOVE THIS ON ACTUAL APP START ---------->*/}
 
-</Form>
+            </Form>
 
         </LoginCard>
       </Container>
