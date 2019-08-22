@@ -3,6 +3,17 @@ const router = express.Router()
 const User = require('../database/models/user')
 const passport = require('../passport')
 
+// checks if user has an account
+router.get('/', (req, res, next) => {
+    console.log('===== user!!======')
+    console.log(req.user)
+    if (req.user) {
+        res.json({ user: req.user })
+    } else {
+        res.json({ user: null })
+    }
+})
+
 router.post('/signup', (req, res) => {
     console.log('user signup');
 
@@ -44,16 +55,6 @@ router.post('/login',
         res.send(userInfo);
     }
 )
-
-router.get('/', (req, res, next) => {
-    console.log('===== user!!======')
-    console.log(req.user)
-    if (req.user) {
-        res.json({ user: req.user })
-    } else {
-        res.json({ user: null })
-    }
-})
 
 router.post('/logout', (req, res) => {
     if (req.user) {

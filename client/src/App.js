@@ -2,18 +2,17 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 // components
-import Signup from './components/sign-up'
-import LoginForm from './components/login-form'
-import Navbar from './components/navbar'
-import Home from './components/home'
+
+import Nav from './components/Nav'
+import Footer from "./components/Footer";
 
 // MAIN DASHBOARD
 import Dashboard from "./pages/Dashboard";
 import Index from "./pages/Index";
-import Login from "./pages/Login";
 import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
-import Footer from "./components/Footer";
+import Signup from './pages/Signup'
+import Login from './pages/Login'
 import "./style.css"
 
 class App extends Component {
@@ -46,9 +45,7 @@ class App extends Component {
       console.log(response.data)
       if (response.data.user) {
         console.log('Get User: There is a user saved in the server session: ')
-
         this.setState({
-          loggedIn: true,
           username: response.data.user.username
         })
       } else {
@@ -65,14 +62,17 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-        <Navbar updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
+        <Nav updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
         <Switch>
           <Route exact path="/" component={Index} />
-          <Route exact path="/dashboard" component={Dashboard} />
           <Route path="/login" render={() =>
-              <LoginForm updateUser={this.updateUser} />}
+            <Login updateUser={this.updateUser} />}
           />
-          <Route exact path="/signup" render={() =><Signup />} />
+          <Route exact path="/signup" render={() =><Signup/>} />
+
+          <Route exact path="/dashboard" render={() => 
+            <Dashboard loggedIn />}
+          />
           <Route exact path="/profile/:id" component={Detail} />
           <Route exact path="/algo/:id" component={Detail} />
           <Route exact path="/currency/:id" component={Detail} />
