@@ -1,120 +1,98 @@
-import React, { Component } from "react";
-import DeleteBtn from "../components/DeleteBtn";
-import Jumbotron from "../components/Jumbotron";
-import API from "../utils/API";
-import { Link } from "react-router-dom";
-import { Col, Row, Container } from "../components/Grid";
-import { List, ListItem } from "../components/List";
-import { Input, TextArea, FormBtn } from "../components/Form";
-import SignupCard from "../components/LoginComponents/SignupCard";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import Colx from "react-bootstrap/Col";
+import React, { Component } from 'react'
+import axios from 'axios'
+
+class Signup extends Component {
+	constructor() {
+		super()
+		this.state = {
+			username: '',
+			password: '',
+			confirmPassword: '',
+
+		}
+		this.handleSubmit = this.handleSubmit.bind(this)
+		this.handleChange = this.handleChange.bind(this)
+	}
+	handleChange(event) {
+		this.setState({
+			[event.target.name]: event.target.value
+		})
+	}
+	handleSubmit(event) {
+		console.log(`sign-up handleSubmit, username: ${this.state.username}`)
+		event.preventDefault()
+
+		//request to server to add a new username/password
+		axios.post('/signup', {
+			username: this.state.username,
+			password: this.state.password
+		})
+			.then(response => {
+				console.log(response)
+				if (!response.data.errmsg) {
+					console.log('successful signup')
+					window.location.replace("/login");
+					this.setState({ //redirect to login page
+						redirectTo: '/login'
+					})
+				} else {
+					console.log('username already taken')
+				}
+			}).catch(error => {
+				console.log('signup error: ')
+				console.log(error)
+
+			})
+	}
 
 
+render() {
+	return (
+		<div className="SignupForm">
+			<h4>Sign up</h4>
+			<form className="form-horizontal">
+				<div className="form-group">
+					<div className="col-1 col-ml-auto">
+						<label className="form-label" htmlFor="username">Username</label>
+					</div>
+					<div className="col-3 col-mr-auto">
+						<input className="form-input"
+							type="text"
+							id="username"
+							name="username"
+							placeholder="Username"
+							value={this.state.username}
+							onChange={this.handleChange}
+						/>
+					</div>
+				</div>
+				<div className="form-group">
+					<div className="col-1 col-ml-auto">
+						<label className="form-label" htmlFor="password">Password: </label>
+					</div>
+					<div className="col-3 col-mr-auto">
+						<input className="form-input"
+							placeholder="password"
+							type="password"
+							name="password"
+							value={this.state.password}
+							onChange={this.handleChange}
+						/>
+					</div>
+				</div>
+				<div className="form-group ">
+					<div className="col-7"></div>
+					<button
+						className="btn btn-primary col-1 col-mr-auto"
+						onClick={this.handleSubmit}
+						type="submit"
+					>Sign up</button>
+				</div>
+			</form>
+		</div>
 
-class Books extends Component {
-  state = {
-    books: [],
-    title: "",
-    author: "",
-    synopsis: ""
-  };
-
-  componentDidMount() {
-    this.loadBooks();
-  }
-
-  loadBooks = () => {
-    API.getBooks()
-      .then(res =>
-        this.setState({ books: res.data, title: "", author: "", synopsis: "" })
-      )
-      .catch(err => console.log(err));
-  };
-
-  deleteBook = id => {
-    API.deleteBook(id)
-      .then(res => this.loadBooks())
-      .catch(err => console.log(err));
-  };
-
-  handleInputChange = event => {
-    const { name, value } = event.target;
-    this.setState({
-      [name]: value
-    });
-  };
-
-  handleFormSubmit = event => {
-    event.preventDefault();
-    if (this.state.title && this.state.author) {
-      API.saveBook({
-        title: this.state.title,
-        author: this.state.author,
-        synopsis: this.state.synopsis
-      })
-        .then(res => this.loadBooks())
-        .catch(err => console.log(err));
-    }
-  };
-
-  render() {
-    return (
-      <Container fluid>
-        <SignupCard>
-          <h1> Sign-Up</h1>
-          <Form>
-
-            <Form.Row>
-              <Form.Group as={Colx} controlId="formGridEmail">
-                <Form.Label>Email</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" />
-              </Form.Group>
-
-              <Form.Group as={Colx} controlId="formGridPassword">
-                <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" />
-              </Form.Group>
-            </Form.Row>
-
-            <Form.Row>
-              <Form.Group as={Colx} controlId="formGridEmail">
-                <Form.Label>Username</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" />
-              </Form.Group>
-
-              <Form.Group as={Colx} controlId="formGridPassword">
-                <Form.Label>Your Name</Form.Label>
-                <Form.Control type="text" placeholder="Your Name" />
-              </Form.Group>
-
-
-            </Form.Row>
-
-
-
-            <Form.Group as={Colx} controlId="formGridPassword">
-              <Form.Label>About</Form.Label>
-              <Form.Control type="text" placeholder="Password" />
-            </Form.Group>
-
-{/* UNCOMMENT THIS START ----------------> */}
-            {/* <Button variant="primary" type="button">
-              Submit
-  </Button> */}
-{/* UNCOMMENT THIS END----------------> */}
-
-{/* REMOVE THIS ON ACTUAL APP START ----------> */}
-              <a className="nav-link" href="/dashboard"><button type="button" className="btn btn-dark ">Submit</button></a>
-{/* REMOVE THIS ON ACTUAL APP START ---------->*/}
-
-          </Form>
-
-        </SignupCard>
-      </Container>
-    );
-  }
+	)
+}
 }
 
-export default Books;
+export default Signup

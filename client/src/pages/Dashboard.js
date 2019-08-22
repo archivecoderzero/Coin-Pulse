@@ -12,51 +12,11 @@ import Button from "react-bootstrap/Button";
 
 
 
-class Books extends Component {
-  state = {
-    books: [],
-    title: "",
-    author: "",
-    synopsis: ""
-  };
+class Dashboard extends Component {
 
   componentDidMount() {
-    this.loadBooks();
+    
   }
-
-  loadBooks = () => {
-    API.getBooks()
-      .then(res =>
-        this.setState({ books: res.data, title: "", author: "", synopsis: "" })
-      )
-      .catch(err => console.log(err));
-  };
-
-  deleteBook = id => {
-    API.deleteBook(id)
-      .then(res => this.loadBooks())
-      .catch(err => console.log(err));
-  };
-
-  handleInputChange = event => {
-    const { name, value } = event.target;
-    this.setState({
-      [name]: value
-    });
-  };
-
-  handleFormSubmit = event => {
-    event.preventDefault();
-    if (this.state.title && this.state.author) {
-      API.saveBook({
-        title: this.state.title,
-        author: this.state.author,
-        synopsis: this.state.synopsis
-      })
-        .then(res => this.loadBooks())
-        .catch(err => console.log(err));
-    }
-  };
 
   render() {
     return (
@@ -129,64 +89,51 @@ class Books extends Component {
           />
         </DashboardMainCard>
 
-<Row>
-<Col size="md-6 sm-12">
-<DashboardAsideLeft>
-  <h3>Trending Articles</h3>
-</DashboardAsideLeft>
+        <Row>
+          <Col size="md-6 sm-12">
+            <DashboardAsideLeft>
+              <h3>Trending Articles</h3>
+            </DashboardAsideLeft>
 
-</Col>
+          </Col>
 
-<Col size="md-3 sm-12">
-<DashboardAsideRight>
-  <h3>Top Traders : </h3>
-  <ul>
-    <li>Trader 1 : 99% Success Rate : 10000 Bit Points </li>
-    <li>Trader 2 : 99% Success Rate : 10000 Bit Points </li>
-    <li>Trader 3 : 99% Success Rate : 10000 Bit Points </li>
-    <li>Trader 4 : 99% Success Rate : 10000 Bit Points </li>
-    <li>Trader 5 : 99% Success Rate : 10000 Bit Points </li>
-    <li>Trader 6 : 99% Success Rate : 10000 Bit Points </li>
-    <li>Trader 7 : 99% Success Rate : 10000 Bit Points </li>
-    <li>Trader 8 : 99% Success Rate : 10000 Bit Points </li>
-  </ul>
-</DashboardAsideRight>
-</Col>
+          <Col size="md-3 sm-12">
+            <DashboardAsideRight>
+              <h3>Top Traders : </h3>
+              <ul>
+                <li>Trader 1 : 99% Success Rate : 10000 Bit Points </li>
+                <li>Trader 2 : 99% Success Rate : 10000 Bit Points </li>
+                <li>Trader 3 : 99% Success Rate : 10000 Bit Points </li>
+                <li>Trader 4 : 99% Success Rate : 10000 Bit Points </li>
+                <li>Trader 5 : 99% Success Rate : 10000 Bit Points </li>
+                <li>Trader 6 : 99% Success Rate : 10000 Bit Points </li>
+                <li>Trader 7 : 99% Success Rate : 10000 Bit Points </li>
+                <li>Trader 8 : 99% Success Rate : 10000 Bit Points </li>
+              </ul>
+            </DashboardAsideRight>
+          </Col>
+          <Col size="md-3 sm-6">
 
-
-<Col size="md-3 sm-6">
-
-<DashboardAsideRight>
-  <h3>Search</h3>
-  <Form>
-  <Form.Group controlId="Search">
-    <Form.Label>Search Cryptocurrency</Form.Label>
-    <Form.Control type="text" placeholder="Search"  />
-    <Form.Text className="text-muted">
-    </Form.Text>
-<br></br>
-    <Button variant="primary" type="button">
-    Search <i class="fas fa-search"></i>
-  </Button>
-  </Form.Group>
-  </Form>
-
-
-
-
-</DashboardAsideRight>
-
-
-</Col>
-
-</Row>
-
-
+            <DashboardAsideRight>
+              <h3>Search</h3>
+              <Form>
+              <Form.Group controlId="Search">
+                <Form.Label>Search Cryptocurrency</Form.Label>
+                <Form.Control type="text" placeholder="Search"  />
+                <Form.Text className="text-muted">
+                </Form.Text>
+                <br></br>
+                <Button variant="primary" type="button">
+                Search <i class="fas fa-search"></i>
+              </Button>
+              </Form.Group>
+              </Form>
+            </DashboardAsideRight>
+          </Col>
+        </Row>
       </Container>
-
-
     );
   }
 }
 
-export default Books;
+export default Dashboard;
