@@ -46,8 +46,15 @@
 <p align="center" >
   <img alt="Version" src="https://github.com/archivecoderzero/Bit-Pulse/blob/master/readme_img/6.PNG?raw=true">
 </p>
-> ### 2. Diplay of Stock Charts :
+
+> ### 2. Diplay of Cryptocurrency Charts :
 - The basic display of stock charts using REACTJS framework, be it real time or static . Web-sockets is also a technology that needs to be incorporated for a real time display of prices .
+
+<h3 align="center">Cryptocurrency Page  </h3>
+<p align="center" >
+  <img alt="Version" src="https://github.com/archivecoderzero/Bit-Pulse/blob/master/readme_img/4.PNG?raw=true">
+</p>
+
 > ### 3 . Stock / Cryptocurrency Information : 
 - Pulling from an API , the application must have an ability to display the information (market cap , high low , float) of the stock . 
 
