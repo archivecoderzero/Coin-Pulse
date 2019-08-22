@@ -58,6 +58,11 @@
 > ### 3 . Stock / Cryptocurrency Information : 
 - Pulling from an API , the application must have an ability to display the information (market cap , high low , float) of the stock . 
 
+<h3 align="center">Cryptocurrency Information  </h3>
+<p align="center" >
+  <img alt="Version" src="https://github.com/archivecoderzero/Bit-Pulse/blob/master/readme_img/9.PNG?raw=true">
+</p>
+
 
 > ### 4 . Sentiment Analysis :
 - This is the main feature of the application , the user can define a 3 parameters , (Ticker) , (Key-Word) , (Grade) , using a scrapper , it will analyze articles from news sites and the market trend to gauge if it is a buy or sell . 
