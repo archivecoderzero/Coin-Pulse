@@ -41,10 +41,29 @@
 
 > ### 1 . User Authentication :
 -  A user needs to be able to join and provide their information , This will be enabled using MONGODB . This also allows users to add in a ticker in their watch list . 
-> ### 2. Diplay of Stock Charts :
+
+<h3 align="center">Authentication Page  </h3>
+<p align="center" >
+  <img alt="Version" src="https://github.com/archivecoderzero/Bit-Pulse/blob/master/readme_img/6.PNG?raw=true">
+</p>
+
+> ### 2. Diplay of Cryptocurrency Charts :
 - The basic display of stock charts using REACTJS framework, be it real time or static . Web-sockets is also a technology that needs to be incorporated for a real time display of prices .
+
+<h3 align="center">Cryptocurrency Page  </h3>
+<p align="center" >
+  <img alt="Version" src="https://github.com/archivecoderzero/Bit-Pulse/blob/master/readme_img/4.PNG?raw=true">
+</p>
+
 > ### 3 . Stock / Cryptocurrency Information : 
 - Pulling from an API , the application must have an ability to display the information (market cap , high low , float) of the stock . 
+
+<h3 align="center">Cryptocurrency Information  </h3>
+<p align="center" >
+  <img alt="Version" src="https://github.com/archivecoderzero/Bit-Pulse/blob/master/readme_img/9.PNG?raw=true">
+</p>
+
+
 > ### 4 . Sentiment Analysis :
 - This is the main feature of the application , the user can define a 3 parameters , (Ticker) , (Key-Word) , (Grade) , using a scrapper , it will analyze articles from news sites and the market trend to gauge if it is a buy or sell . 
 
