@@ -37,6 +37,7 @@ class App extends Component {
   // sends the userObject thru to set the state in a different componenet
   updateUser (userObject) {
     this.setState(userObject)
+    console.log(this.state);
   }
 
   // checks if this user has an account
@@ -47,6 +48,7 @@ class App extends Component {
       if (response.data.user) {
         console.log('Get User: There is a user saved in the server session: ')
         this.setState({
+          loggedIn: true,
           username: response.data.user.username
         })
       } else {
@@ -58,6 +60,8 @@ class App extends Component {
       }
     })
   }
+
+  
 
   render() {
     return (
@@ -71,11 +75,21 @@ class App extends Component {
           />
           <Route exact path="/signup" render={() =><Signup/>} />
 
-          <Route exact path="/dashboard" render={() => 
-            <Dashboard loggedIn />}
+          <Route exact path="/dashboard" render={ this.state.loggedIn ? 
+            (
+              () => <Dashboard />
+            ) : (
+              () => <Login />
+            )}
           />
           <Route exact path="/profile/:id" component={Detail} />
-          <Route exact path="/algo/btc" component={Algo} />
+          <Route exact path="/algo/btc" render={ this.state.loggedIn ? 
+          (
+            () => <Algo />
+          ) : (
+            () => <Login />
+          )}
+          />
           <Route exact path="/currency/:id" component={Detail} />
           <Route component={NoMatch}/>
         </Switch>

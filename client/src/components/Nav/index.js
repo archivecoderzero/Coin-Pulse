@@ -75,7 +75,7 @@ class Navbar extends Component {
                     <div className="col-6">
                         <div id="top-filler"></div>
                         <a className="navbar-brand" href="/">
-                        Bit-Pulse <i class="fab fa-bitcoin"></i>
+                        Bit-Pulse <i className="fab fa-bitcoin"></i>
                         </a>
                     </div>
                     <div className="col-3" > 
