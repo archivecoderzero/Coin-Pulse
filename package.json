@@ -17,7 +17,8 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^4.1.0",
-    "nodemon": "^1.18.7"
+    "nodemon": "^1.18.7",
+    "@babel/runtime": "7.0.0-beta.46"
   },
   "dependencies": {
     "axios": "^0.18.0",

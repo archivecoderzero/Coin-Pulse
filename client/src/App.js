@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import Dashboard from "./pages/Dashboard";
 import Index from "./pages/Index";
 import Detail from "./pages/Detail";
+import Algo from "./pages/Algo";
 import NoMatch from "./pages/NoMatch";
 import Signup from './pages/Signup'
 import Login from './pages/Login'
@@ -74,7 +75,7 @@ class App extends Component {
             <Dashboard loggedIn />}
           />
           <Route exact path="/profile/:id" component={Detail} />
-          <Route exact path="/algo/:id" component={Detail} />
+          <Route exact path="/algo/btc" component={Algo} />
           <Route exact path="/currency/:id" component={Detail} />
           <Route component={NoMatch}/>
         </Switch>
