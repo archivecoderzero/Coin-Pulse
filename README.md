@@ -44,7 +44,7 @@
 
 <h3 align="center">Authentication Page  </h3>
 <p align="center" >
-  <img alt="Version" src="https://github.com/archivecoderzero/Bit-Pulse/blob/master/readme_img/5.PNG?raw=true">
+  <img alt="Version" src="https://github.com/archivecoderzero/Bit-Pulse/blob/master/readme_img/6.PNG?raw=true">
 </p>
 > ### 2. Diplay of Stock Charts :
 - The basic display of stock charts using REACTJS framework, be it real time or static . Web-sockets is also a technology that needs to be incorporated for a real time display of prices .
