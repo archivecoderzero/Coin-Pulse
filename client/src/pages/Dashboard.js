@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import API from "../utils/API";
-import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import DashboardMainCard from "../components/DashboardComponents/DashboardMainCard"
 import DashboardAsideLeft from "../components/DashboardComponents/DashboardAsideLeft"
@@ -14,7 +12,7 @@ import Button from "react-bootstrap/Button";
 
 class Dashboard extends Component {
 
-  
+
 
   componentDidMount() {
 
@@ -27,7 +25,7 @@ class Dashboard extends Component {
           <CryptoCard
             currencyName='Bitcoin'
             currencyPrice='$8850.32'
-            icon={<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/2000px-Bitcoin.svg.png" />}
+            icon={<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/2000px-Bitcoin.svg.png" alt=""/>}
             currencyShortName='BTC'
             trend='(8.54%) $563.47'
             trendDirection={1}
@@ -37,7 +35,7 @@ class Dashboard extends Component {
           <CryptoCard
             currencyName='Ethereum'
             currencyPrice='$766.12'
-            icon={<img src="https://maxcdn.icons8.com/Share/icon/color/Logos/ethereum1600.png" />}
+            icon={<img src="https://maxcdn.icons8.com/Share/icon/color/Logos/ethereum1600.png" alt=""/>}
             currencyShortName='ETH'
             trend='(7.32%) $14.94'
             trendDirection={1}
@@ -48,7 +46,7 @@ class Dashboard extends Component {
           <CryptoCard
             currencyName='Litecoin'
             currencyPrice='$137.92'
-            icon={<img src="http://icons.iconarchive.com/icons/blackvariant/button-ui-requests-6/1024/LiteCoin-icon.png" />}
+            icon={<img src="http://icons.iconarchive.com/icons/blackvariant/button-ui-requests-6/1024/LiteCoin-icon.png" alt=""/>}
             currencyShortName='LTC'
             trend='(-5.12%) $6.34'
             trendDirection={-1}
@@ -60,7 +58,7 @@ class Dashboard extends Component {
           <CryptoCard
             currencyName='Cryptocurrency 1'
             currencyPrice='$99.2'
-            icon={<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/2000px-Bitcoin.svg.png" />}
+            icon={<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/2000px-Bitcoin.svg.png" alt=""/>}
             currencyShortName='SAMPLE1'
             trend='(8.54%) $99.47'
             trendDirection={1}
@@ -71,7 +69,7 @@ class Dashboard extends Component {
           <CryptoCard
             currencyName='Cryptocurrency 2'
             currencyPrice='$99.2'
-            icon={<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/2000px-Bitcoin.svg.png" />}
+            icon={<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/2000px-Bitcoin.svg.png" alt=""/>}
             currencyShortName='Sample 2'
             trend='(8.54%) $55.47'
             trendDirection={1}
@@ -82,7 +80,7 @@ class Dashboard extends Component {
           <CryptoCard
             currencyName='Cryptocurrency 3'
             currencyPrice='$99.2'
-            icon={<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/2000px-Bitcoin.svg.png" />}
+            icon={<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/2000px-Bitcoin.svg.png" alt=""/>}
             currencyShortName='Sample 3'
             trend='(8.54%) $33.47'
             trendDirection={1}

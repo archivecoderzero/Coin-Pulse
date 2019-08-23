@@ -4,7 +4,7 @@ import { Line } from 'react-chartjs-2';
 import _ from 'lodash';
 
 import config from './config';
-import styles from './styles.scss';
+import './styles.scss';
 
 class CryptoChart extends React.Component {
   constructor(props) {

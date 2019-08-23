@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // components
 
 import Nav from './components/Nav'
@@ -15,6 +15,8 @@ import NoMatch from "./pages/NoMatch";
 import Signup from './pages/Signup'
 import Login from './pages/Login'
 import "./style.css"
+import Modal from 'react-bootstrap/Modal';
+import { Button } from 'react-bootstrap';
 
 class App extends Component {
   constructor() {
@@ -61,6 +63,27 @@ class App extends Component {
     })
   }
 
+  modal = () => {
+    const [show, setShow] = React.useState(false);
+    const handleClose = () => setShow(false);
+
+    return (
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    )
+  }
   
 
   render() {
@@ -79,7 +102,7 @@ class App extends Component {
               (
                 () => <Dashboard />
               ) : (
-                () => <Login updateUser={this.updateUser} />
+                () => <Login modal={() => this.modal()} updateUser={this.updateUser} />
               )}
             />
             <Route exact path="/profile/:id" component={Detail} />
