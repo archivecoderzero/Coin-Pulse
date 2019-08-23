@@ -79,7 +79,7 @@ class App extends Component {
             (
               () => <Dashboard />
             ) : (
-              () => <Login />
+              () => <Login updateUser={this.updateUser} />
             )}
           />
           <Route exact path="/profile/:id" component={Detail} />
@@ -87,7 +87,7 @@ class App extends Component {
           (
             () => <Algo />
           ) : (
-            () => <Login />
+            () => <Login updateUser={this.updateUser}/>
           )}
           />
           <Route exact path="/currency/:id" component={Detail} />
