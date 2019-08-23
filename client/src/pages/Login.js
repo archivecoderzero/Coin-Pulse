@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import axios from 'axios'
+import Modal from 'react-bootstrap/Modal'
+import Button from 'react-bootstrap/Button'
 
 class Login extends Component {
     constructor() {
@@ -8,20 +10,21 @@ class Login extends Component {
         this.state = {
             username: '',
             password: '',
-            redirectTo: null
+            redirectTo: null,
+            modal: false
         }
-        this.handleSubmit = this.handleSubmit.bind(this)
-        this.handleChange = this.handleChange.bind(this)
+        // this.handleSubmit = this.handleSubmit.bind(this)
+        // this.handleChange = this.handleChange.bind(this)
   
     }
 
-    handleChange(event) {
+    handleChange = event => {
         this.setState({
             [event.target.name]: event.target.value
         })
     }
 
-    handleSubmit(event) {
+    handleSubmit = event => {
         event.preventDefault()
         console.log('handleSubmit')
 
@@ -50,6 +53,7 @@ class Login extends Component {
                 
             })
     }
+    
 
     render() {
         if (this.state.redirectTo) {
@@ -57,6 +61,7 @@ class Login extends Component {
         } else {
             return (
                 <div>
+
                     <h4>Login</h4>
                     <form className="form-horizontal">
                         <div className="form-group">

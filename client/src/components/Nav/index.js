@@ -21,7 +21,7 @@ class Navbar extends Component {
               username: null
             })
           }
-          window.location.replace("/login");
+        //   window.location.replace("/login");
         }).catch(error => {
             console.log('Logout error')
         })
@@ -52,8 +52,8 @@ class Navbar extends Component {
                         </div>
                         <div className="col-3" >        
                             <section className="navbar-section">
-                                <Link to="#" className="btn btn-link text-secondary" onClick={this.logout}>
-                                <span className="text-secondary">logout</span></Link>
+                                <div to="#" className="btn btn-link text-secondary" onClick={this.logout}>
+                                <span className="text-secondary">logout</span></div>
                             </section>                        
                         </div>        
                     </header>

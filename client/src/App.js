@@ -67,33 +67,33 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-        <Nav updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
-        <Switch>
-          <Route exact path="/" component={Index} />
-          <Route path="/login" render={() =>
-            <Login updateUser={this.updateUser} />}
-          />
-          <Route exact path="/signup" render={() =><Signup/>} />
+          <Nav updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
+          <Switch>
+            <Route exact path="/" component={Index} />
+            <Route path="/login" render={() =>
+              <Login updateUser={this.updateUser} />}
+            />
+            <Route exact path="/signup" render={() =><Signup/>} />
 
-          <Route exact path="/dashboard" render={ this.state.loggedIn ? 
+            <Route exact path="/dashboard" render={ this.state.loggedIn ? 
+              (
+                () => <Dashboard />
+              ) : (
+                () => <Login updateUser={this.updateUser} />
+              )}
+            />
+            <Route exact path="/profile/:id" component={Detail} />
+            <Route exact path="/algo/btc" render={ this.state.loggedIn ? 
             (
-              () => <Dashboard />
+              () => <Algo />
             ) : (
-              () => <Login updateUser={this.updateUser} />
+              () => <Login updateUser={this.updateUser}/>
             )}
-          />
-          <Route exact path="/profile/:id" component={Detail} />
-          <Route exact path="/algo/btc" render={ this.state.loggedIn ? 
-          (
-            () => <Algo />
-          ) : (
-            () => <Login updateUser={this.updateUser}/>
-          )}
-          />
-          <Route exact path="/currency/:id" component={Detail} />
-          <Route component={NoMatch}/>
-        </Switch>
-        <Footer />
+            />
+            <Route exact path="/currency/:id" component={Detail} />
+            <Route component={NoMatch}/>
+          </Switch>
+          <Footer />
         </div> 
     </Router>
     );
