@@ -20,7 +20,7 @@ ReactDOM.render(
 	<MuiThemeProvider theme={theme}>
 	<BrowserRouter>
 		<App />
-	</BrowserRouter>,
+	</BrowserRouter>
   </MuiThemeProvider>,
 
 	document.getElementById('root')
