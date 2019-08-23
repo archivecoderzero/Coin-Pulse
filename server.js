@@ -7,7 +7,7 @@ const MongoStore = require('connect-mongo')(session)
 const passport = require('./passport');
 var cors = require('cors');
 const app = express();
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 // Route requires
 const user = require('./routes/user')
 
