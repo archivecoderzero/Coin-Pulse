@@ -15,11 +15,16 @@ class Login extends Component {
         // this.handleChange = this.handleChange.bind(this)
   
     }
-
     handleChange = event => {
         this.setState({
             [event.target.name]: event.target.value
         })
+    }
+
+    componentDidMount = () => {
+        // if (this.props.alert) {
+        //     alert("You must have an account to view this page!");
+        // }
     }
 
     handleSubmit = event => {
@@ -59,7 +64,7 @@ class Login extends Component {
         } else {
             return (
                 <div>
-
+                    {this.props.Modal ? (this.props.Modal):(<div></div>)}
                     <h4>Login</h4>
                     <form className="form-horizontal">
                         <div className="form-group">

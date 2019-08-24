@@ -23,27 +23,28 @@ class App extends Component {
     super()
     this.state = {
       loggedIn: false,
-      username: null
+      username: null,
+      show: false
     }
 
-    this.getUser = this.getUser.bind(this)
-    this.componentDidMount = this.componentDidMount.bind(this)
-    this.updateUser = this.updateUser.bind(this)
+    // this.getUser = this.getUser.bind(this)
+    // this.componentDidMount = this.componentDidMount.bind(this)
+    // this.updateUser = this.updateUser.bind(this)
   }
 
   // waits for component to mount and exucutes this.getUser()
-  componentDidMount() {
+  componentDidMount = () => {
     this.getUser()
   }
 
   // sends the userObject thru to set the state in a different componenet
-  updateUser (userObject) {
+  updateUser = userObject => {
     this.setState(userObject)
     console.log(this.state);
   }
 
   // checks if this user has an account
-  getUser() {
+  getUser = () => {
     axios.get('/user/').then(response => {
       console.log('Get user response: ')
       console.log(response.data)
@@ -61,28 +62,6 @@ class App extends Component {
         })
       }
     })
-  }
-
-  modal = () => {
-    const [show, setShow] = React.useState(false);
-    const handleClose = () => setShow(false);
-
-    return (
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
-      </Modal>
-    )
   }
   
 
@@ -102,7 +81,7 @@ class App extends Component {
               (
                 () => <Dashboard />
               ) : (
-                () => <Login modal={() => this.modal()} updateUser={this.updateUser} />
+                () => <Login alert={alert} updateUser={this.updateUser} />
               )}
             />
             <Route exact path="/profile/:id" component={Detail} />
