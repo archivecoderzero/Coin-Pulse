@@ -45,13 +45,13 @@ class Navbar extends Component {
                         </div>
                         <div className="col-6">
                             <div id="top-filler"></div>
-                            <a className="navbar-brand" href="/">
+                            <Link to="/dashboard" className="navbar-brand" >
                             Satoshi-Pulse <i className="fab fa-bitcoin"></i>
-                            </a>
+                            </Link>
                         </div>
                         <div className="col-3" >        
                             <section className="navbar-section">
-                                <div to="#" className="btn btn-link text-secondary" onClick={this.logout}>
+                                <div to="/dashboard" className="btn btn-link text-secondary" onClick={this.logout}>
                                 <span className="text-secondary">logout</span></div>
                             </section>                        
                         </div>        
@@ -73,9 +73,9 @@ class Navbar extends Component {
                     </div>
                     <div className="col-6">
                         <div id="top-filler"></div>
-                        <a className="navbar-brand" href="/">
+                        <Link to="/" className="navbar-brand">
                         Satoshi-Pulse <i className="fab fa-bitcoin"></i>
-                        </a>
+                        </Link>
                     </div>
                     <div className="col-3" > 
 
