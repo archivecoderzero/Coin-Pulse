@@ -85,13 +85,27 @@ class App extends Component {
               )}
             />
             <Route exact path="/profile/:id" component={Detail} />
-            <Route exact path="/algo/btc" render={ this.state.loggedIn ? 
+
+
+            <Route exact path="/algo" render={this.state.loggedIn ? 
             (
+              // TERNARY EXPRESSION 
               () => <Algo />
             ) : (
-              () => <Login updateUser={this.updateUser}/>
+              () => <Algo />
+              
+              
+              // UNCOMMENT WHEN ROUTES FIXED -- > START
+
+              // <Login updateUser={this.updateUser}/>
+
+              // UNCOMMENT WHEN ROUTES FIXED -- > END
+
+
             )}
             />
+
+
             <Route exact path="/currency/:id" component={Detail} />
             <Route component={NoMatch}/>
           </Switch>

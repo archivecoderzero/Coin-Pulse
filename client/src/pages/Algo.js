@@ -1,12 +1,22 @@
 import React from "react";
 import { withStyles } from "@material-ui/core/styles";
-import Chart from "./chart";
+import Chart from "../components/Algo/chart";
+import Sentiment from "../components/Algo/Sentiment"
 
 const styles = theme => ({
   "chart-container": {
-    height: 400
+    height: 400,
+    width: "100%"
   }
 });
+
+const chartSize = {
+width: "50%",
+border: '5px solid pink'
+};
+
+
+
 
 class App extends React.Component {
   state = {
@@ -16,12 +26,12 @@ class App extends React.Component {
         {
           type: "line",
           label: "BTC-USD",
-          backgroundColor: "rgba(0, 0, 0, 0)",
+          backgroundColor: "rgba(0, 0, 0, 0.1)",
           borderColor: this.props.theme.palette.primary.main,
-          pointBackgroundColor: this.props.theme.palette.secondary.main,
+          pointBackgroundColor: this.props.theme.palette.secondary,
           pointBorderColor: this.props.theme.palette.secondary.main,
-          borderWidth: "2",
-          lineTension: 0.45,
+          borderWidth: "1",
+          lineTension: 0.01,
           data: []
         }
       ]
@@ -89,14 +99,19 @@ class App extends React.Component {
 
   render() {
     const { classes } = this.props;
-
     return (
       <div className={classes["chart-container"]}>
         <Chart
           data={this.state.lineChartData}
           options={this.state.lineChartOptions}
+          style={chartSize}
         />
+        <Sentiment
+
+        />
+
       </div>
+
     );
   }
 }
