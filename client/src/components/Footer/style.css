@@ -1,13 +1,23 @@
 
-.navbar.navbar-expand-lg.navbar-dark.bg-primary.footer{
+/* .navbar.navbar-expand-lg.navbar-dark.bg-primary.footer{
 	width: 100%;
 	bottom: 0;
+	position: fixed;
+} */
 
-}
-#footer{
+.footer{
 	text-align: center;
-	padding:0 px;
-	font-size: 10px;
+	padding: 6px;
+	/* font-size: 5px; */
+	width: 100%;
+	bottom: 0;
+	position: fixed;
+	color: #fff;
+	background-color: rgb(83, 70, 70);
 }
+/* .footer{
+	text-align: center;
+	padding:10px;
+	font-size: 20px;
 
-
+} */

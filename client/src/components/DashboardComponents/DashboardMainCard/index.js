@@ -1,9 +1,10 @@
 import React from "react";
+import { relative } from "path";
 
 function DashboardMainCard({ children }) {
   return (
     <div
-      style={{ height: 700,  paddingTop: 120, marginTop:60, textAlign: "center" }}
+      style={{ height: 650,  paddingTop: 10, marginTop: 0,  textAlign: "center"}}
       className="jumbotron"
     >
       {children}
