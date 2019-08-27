@@ -30,13 +30,18 @@
  
   margin-top: auto;
   
+  
 }
 #top-filler {
   margin-bottom: auto;
 }
 
 #nav-container {
-  align-items: flex-end;
+  margin-bottom: 1rem;
+}
+.navbar-section {
+  float: right;
+  margin-bottom: 1rem;
 }
 
 @keyframes App-logo-spin {
