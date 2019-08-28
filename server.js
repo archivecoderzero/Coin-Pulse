@@ -9,7 +9,7 @@ var cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 8080;
 // Route requires
-const user = require('./routes/user')
+const user = require('./routes')
 
 // MIDDLEWARE
 app.use(morgan('dev'))
@@ -38,7 +38,7 @@ app.use(passport.session()) // calls the deserializeUser
 
 
 // Routes
-app.use('/user', user)
+app.use(user)
 
 // Starting Server 
 app.listen(PORT, () => {
