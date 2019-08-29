@@ -41,21 +41,7 @@ article {
   margin-top: 21px;
   margin-bottom: 21px;
   overflow: hidden;
-  box-shadow: 6px 4px 9px 1px rgba(119, 119, 119, 0.75);
-  -moz-box-shadow: 6px 4px 9px 1px rgba(119, 119, 119, 0.75);
-  -webkit-box-shadow: 6px 4px 9px 1px rgba(119, 119, 119, 0.75);
-}
-article img {
-  width: 64px;
-  float: left;
-  margin:0 5px 0 0;
-}
-.right table {
-  width: 100%;
-}
-.right table, .right table td {
-  border: 1px solid;
-}
-.right table td {
-  width: 50%;
+  box-shadow:  rgba(119, 119, 119, 0.75);
+  -moz-box-shadow:  rgba(119, 119, 119, 0.75);
+  -webkit-box-shadow: rgba(119, 119, 119, 0.75);
 }
