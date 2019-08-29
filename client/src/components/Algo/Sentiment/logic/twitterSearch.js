@@ -1,10 +1,8 @@
 //includes
-var util = require('util'),
   twitter = require('twitter'),
   sentimentAnalysis = require('./sentimentAnalysis'),
   db = require('diskdb');
-
-db = db.connect('db', ['sentiments']);
+  db = db.connect('db', ['sentiments']);
 
 //config
 var config = {
