@@ -9,6 +9,8 @@ $(document).ready(function() {
     }
   });
 
+  
+
   function fireAJAX(text) {
     $.ajax({
       type: "POST",
@@ -21,38 +23,29 @@ $(document).ready(function() {
         $('.results').show();
         enableState();
       },
-      success: parseData,poop,
+      success: parseData,
       error: oops
     });
   }
 
-  function poop(){
-    console.log("poop")
-  }
+
+
   function parseData(data) {
     disableState();
     var html = '';
+    var sentimentScore = 0;
+
     for (var i = 0; i < data.length; i++) {
       var s = data[i].sentiment 
       var t = data[i].tweet;
 
-      var tweetVariable = {
-        imgSrc: t.user.profile_image_url,
-        tweetLink: 'http://twitter.com/' + t.user.screen_name + '/status/' + t.id_str,
-        tweet: t.text,
-        score: s.score ? s.score : '0',
-        comparative: s.comparative ? s.comparative : '0',
-        favorited: t.favorite_count ? t.favorite_count : 0,
-        retweet: t.retweet_count ? t.retweet_count : 0,
-        wordsMatched: s.words && s.words.length ? s.words : '0',
-        positiveWords: s.positive && s.positive.length ? s.positive : '0',
-        negativeWords: s.negative && s.negative.length ? s.negative : '0'
-      };
+      let tweetScore = s.score ;
+      sentimentScore += 0 + tweetScore * parseInt((t.retweet_count + 1)) ;
 
-      html += tmpl('tweet_tmpl', tweetVariable);
-      var sentimentScore = parseInt(s.score)
-      sentimentScore += parseInt(s.score)
+
+
     };
+
 
     $('.tweet-results').html(html);
     $('#sentimentScore').html(sentimentScore);

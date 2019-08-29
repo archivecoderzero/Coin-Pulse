@@ -7,57 +7,18 @@
 </head>
 
 <body>
-  <h1>Sentiment Analysis App</h1>
-  <h1>Score:<span id="sentimentScore">?</span></h1>
-
+  <h1>Twitter Sentiment Analysis Bot </h1>
   <hr/>
-  <input type="text" id="searchText" placeholder="Enter the text you would like to see the analysis for and hit return">
+  <input type="text" id="searchText" placeholder="Keyword">
   <div class="results">
-    <h3>Results</h3>
-    <lable class="loading">Loading.. Please wait</lable>
-    <br/>
-    <lable class="error">Oops.. Something went wrong</lable>
-    <br/>
-  </div>
-  <section class="tweet-results">
+
+      <h1>Score:<h3 id="sentimentScore">?</h3></h1>
+    </div>
+
   </section>
-
-
  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
  <script type="text/javascript" src="scripts/app.js"></script>
 
-
-  <script type="text/html" id="tweet_tmpl">
-    <article>
-      <div class="left">
-        <table>
-          <tr>
-            <td>Score</td>
-            <td> {{=score}}</td>
-          </tr>
-          <tr>
-            <td>Favorited</td>
-            <td> {{=favorited}}</td>
-          </tr>
-          <tr>
-            <td>Retweeted</td>
-            <td> {{=retweet}}</td>
-          </tr>
-          <tr>
-            <td>Words Matched</td>
-            <td>{{=wordsMatched}}</td>
-          </tr>
-          <tr>
-            <td>Positive Words</td>
-            <td>{{=positiveWords}}</td>
-          </tr>
-          <tr>
-            <td>Negative Words</td>
-            <td>{{=negativeWords}}</td>
-          </tr>
-        </table>
-      </div>
-    </article>
   </script>
 </body>
 
