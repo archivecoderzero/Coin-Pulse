@@ -31,7 +31,7 @@ app.use(function(req, res, next) {
 
 
 // RUN APPLICATION ON THE PORT : 
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 3001);
 var server = app.listen(app.get('port'), function() {
   console.log('Express server listening on port ' + server.address().port);
 });

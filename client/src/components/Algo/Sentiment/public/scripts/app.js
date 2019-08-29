@@ -40,9 +40,11 @@ $(document).ready(function() {
       var t = data[i].tweet;
 
       let tweetScore = s.score ? s.score:0;
-      sentimentScore += 0 + tweetScore * parseInt((t.retweet_count + 1)) ;
+      sentimentScore += tweetScore * parseInt((t.retweet_count + 1));
+      
+      // * parseInt((t.retweet_count + 1)) ;
+      
     };
-    $('.tweet-results').html(html);
     $('#sentimentScore').html(sentimentScore);
   }
 
