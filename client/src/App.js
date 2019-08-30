@@ -100,8 +100,6 @@ class App extends Component {
               // <Login updateUser={this.updateUser}/>
 
               // UNCOMMENT WHEN ROUTES FIXED -- > END
-
-
             )}
             />
 
