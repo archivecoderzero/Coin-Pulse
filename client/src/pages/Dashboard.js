@@ -87,10 +87,13 @@ class Dashboard extends Component {
             chartData={[5, 5, 664, 9, 7, 55, 6, 1, 99, 6, 3, 4, 5, 6, 6]}
             chartColor='#FF00FF'
           />
+
+
+
         </DashboardMainCard>
 
         <Row>
-          <Col size="md-6 sm-12">
+          <Col size="md-3">
             <DashboardAsideLeft>
               <h3>Trending Articles</h3>
             </DashboardAsideLeft>
