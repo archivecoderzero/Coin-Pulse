@@ -86,7 +86,7 @@ class App extends Component {
 
       
             <Route exact path="/algo/btc" render={ this.state.loggedIn ? 
-            <Route exact path="/algo" render={this.state.loggedIn ? 
+            
 
             (
               // TERNARY EXPRESSION 
