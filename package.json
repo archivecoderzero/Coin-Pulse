@@ -23,6 +23,7 @@
     "axios": "^0.18.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
+    "coinmarketcap-api": "^3.0.1",
     "connect-mongo": "^3.0.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
@@ -32,6 +33,8 @@
     "morgan": "^1.9.1",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4",
     "spectre.css": "^0.5.8"
   },
   "proxy": "http://localhost:8080"

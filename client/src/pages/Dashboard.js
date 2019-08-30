@@ -3,25 +3,40 @@ import { Col, Row, Container } from "../components/Grid";
 import DashboardMainCard from "../components/DashboardComponents/DashboardMainCard"
 import DashboardAsideLeft from "../components/DashboardComponents/DashboardAsideLeft"
 import DashboardAsideRight from "../components/DashboardComponents/DashboardAsideRight"
-
 import CryptoCard from "../components/DashboardComponents/CryptoCard"
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+
+import axios from 'axios'
+
 
 
 
 class Dashboard extends Component {
 
 
+  handleSubmit = event => {
+    event.preventDefault()
+
+
+  }
 
   componentDidMount() {
 
+    axios.get('/api/')
+    .then(response => {
+        console.log(response);
+        console.log("end api");
+    }).catch(error => {
+        console.log('api error: ')
+        console.log(error);
+    })
   }
 
   render() {
     return (
       <Container fluid>
-        <DashboardMainCard>
+        <DashboardMainCard onClick={this.handleSubmit}>
           <CryptoCard
             currencyName='Bitcoin'
             currencyPrice='$8850.32'

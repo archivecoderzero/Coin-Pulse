@@ -64,7 +64,6 @@ class Login extends Component {
         } else {
             return (
                 <div>
-                    {this.props.Modal ? (this.props.Modal):(<div></div>)}
                     <h4>Login</h4>
                     <form className="form-horizontal">
                         <div className="form-group">
