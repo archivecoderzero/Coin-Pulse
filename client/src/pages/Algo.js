@@ -5,8 +5,9 @@ import Sentiment from "../components/Algo/Sentiment"
 
 const styles = theme => ({
   "chart-container": {
+    marginTop:10,
     height: 400,
-    width: "100%"
+    width: "50%"
   }
 });
 
@@ -107,6 +108,7 @@ class App extends React.Component {
           style={chartSize}
         />
         <Sentiment
+        
 
         />
 

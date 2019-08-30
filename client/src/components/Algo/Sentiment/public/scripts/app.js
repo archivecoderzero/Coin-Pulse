@@ -32,18 +32,13 @@ $(document).ready(function() {
 
   function parseData(data) {
     disableState();
-    var html = '';
     var sentimentScore = 0;
-
     for (var i = 0; i < data.length; i++) {
       var s = data[i].sentiment 
       var t = data[i].tweet;
-
-      let tweetScore = s.score ? s.score:0;
-      sentimentScore += tweetScore * parseInt((t.retweet_count + 1));
-      
-      // * parseInt((t.retweet_count + 1)) ;
-      
+      let tweetScore = s.score ? (s.score*parseInt((t.retweet_count + 1)))  : 0;
+      sentimentScore += tweetScore ;
+    
     };
     $('#sentimentScore').html(sentimentScore);
   }
