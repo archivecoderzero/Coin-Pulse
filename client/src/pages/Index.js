@@ -9,6 +9,9 @@ import SignupCard from "../components/IndexComponents/SignupCard";
 
 import { Col, Row, Container } from "../components/Grid";
 
+
+var d3 = require('d3');
+
 class Index extends Component {
 
   componentDidMount() {

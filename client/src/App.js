@@ -9,11 +9,14 @@ import Footer from "./components/Footer";
 // MAIN DASHBOARD
 import Dashboard from "./pages/Dashboard";
 import Index from "./pages/Index";
+import Chart from "./pages/Chart";
 import Sentiment from "./pages/Sentiment";
+
 import NoMatch from "./pages/NoMatch";
 import Signup from './pages/Signup'
 import Login from './pages/Login'
 import "./style.css"
+
 
 class App extends Component {
   constructor() {
@@ -60,10 +63,12 @@ class App extends Component {
       }
     })
   }
-  
+
 
   render() {
     return (
+
+
       <Router>
         <div className="App">
           <Nav updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
@@ -72,32 +77,45 @@ class App extends Component {
             <Route path="/login" render={() =>
               <Login updateUser={this.updateUser} />}
             />
-            <Route exact path="/signup" render={() =><Signup/>} />
+            <Route exact path="/signup" render={() => <Signup />} />
 
-            <Route exact path="/dashboard" render={ this.state.loggedIn ? 
+            <Route exact path="/dashboard" render={this.state.loggedIn ?
               (
                 () => <Dashboard />
               ) : (
                 () => <Login alert={alert} updateUser={this.updateUser} />
               )}
             />
-            <Route exact path="/sentiment" render={ this.state.loggedIn ? 
-            (
-              // TERNARY EXPRESSION 
-              () => <Sentiment />
-            ) : (
-              () => <Sentiment />
-              // UNCOMMENT WHEN ROUTES FIXED -- > START
-              // <Login updateUser={this.updateUser}/>
-              // UNCOMMENT WHEN ROUTES FIXED -- > END
-            )}
+            <Route exact path="/chart" render={this.state.loggedIn ?
+              (
+                // TERNARY EXPRESSION 
+                () => <Chart />
+              ) : (
+                () => <Chart />
+                // UNCOMMENT WHEN ROUTES FIXED -- > START
+                // <Login updateUser={this.updateUser}/>
+                // UNCOMMENT WHEN ROUTES FIXED -- > END
+              )}
             />
-            <Route component={NoMatch}/>
+
+            <Route exact path="/sentiment" render={this.state.loggedIn ?
+              (
+                // TERNARY EXPRESSION 
+                () => <Sentiment />
+              ) : (
+                () => <Sentiment />
+                // UNCOMMENT WHEN ROUTES FIXED -- > START
+                // <Login updateUser={this.updateUser}/>
+                // UNCOMMENT WHEN ROUTES FIXED -- > END
+              )}
+            />
+            <Route component={NoMatch} />
           </Switch>
           <Footer />
-        </div> 
-    </Router>
+        </div>
+      </Router>
     );
   }
 }
+
 export default App;
