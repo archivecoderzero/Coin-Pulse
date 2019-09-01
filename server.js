@@ -11,9 +11,9 @@ const MongoStore = require('connect-mongo')(session)
 const passport = require('./passport');
 var cors = require('cors');
 const app = express();
-const socketPort = process.env.PORT || 8000;
+const socketPort = process.env.PORT || 8080;
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8000;
 // Route requires
 const user = require('./routes')
 
