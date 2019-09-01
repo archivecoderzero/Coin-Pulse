@@ -6,19 +6,10 @@ import DashboardAsideRight from "../components/DashboardComponents/DashboardAsid
 import CryptoCard from "../components/DashboardComponents/CryptoCard"
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-
 import axios from 'axios'
-
-
-
-
 class Dashboard extends Component {
-
-
   handleSubmit = event => {
     event.preventDefault()
-
-
   }
 
   componentDidMount() {
@@ -35,8 +26,11 @@ class Dashboard extends Component {
 
   render() {
     return (
+
       <Container fluid>
         <DashboardMainCard onClick={this.handleSubmit}>
+        <Row>
+        <Col size="md-4">
           <CryptoCard
             currencyName='Bitcoin'
             currencyPrice='$8850.32'
@@ -46,7 +40,8 @@ class Dashboard extends Component {
             trendDirection={1}
             chartData={[9200, 5720, 8100, 6734, 7054, 7832, 6421, 7383, 8697, 8850]}
           />
-
+          </Col>
+          <Col size="md-4">
           <CryptoCard
             currencyName='Ethereum'
             currencyPrice='$766.12'
@@ -57,7 +52,8 @@ class Dashboard extends Component {
             chartData={[760, 500, 800, 670, 820, 620, 796, 766]}
             chartColor='#9b59b6'
           />
-
+          </Col>
+          <Col size="md-4">
           <CryptoCard
             currencyName='Litecoin'
             currencyPrice='$137.92'
@@ -68,54 +64,18 @@ class Dashboard extends Component {
             chartData={[90, 120, 115, 85, 75, 92, 70, 101, 111, 137]}
             chartColor='#ecf0f1'
           />
-
-
-          <CryptoCard
-            currencyName='Cryptocurrency 1'
-            currencyPrice='$99.2'
-            icon={<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/2000px-Bitcoin.svg.png" alt=""/>}
-            currencyShortName='SAMPLE1'
-            trend='(8.54%) $99.47'
-            trendDirection={1}
-            chartData={[5, 5, 6, 9, 7, 5, 6, 1, 99, 6, 3, 4, 5, 6, 6]}
-            chartColor='#333333'
-          />
-
-          <CryptoCard
-            currencyName='Cryptocurrency 2'
-            currencyPrice='$99.2'
-            icon={<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/2000px-Bitcoin.svg.png" alt=""/>}
-            currencyShortName='Sample 2'
-            trend='(8.54%) $55.47'
-            trendDirection={1}
-            chartData={[5, 67, 6, 9, 95, 5, 6, 1, 4, 6, 3, 4, 5, 6, 886]}
-            chartColor='#800000'
-          />
-
-          <CryptoCard
-            currencyName='Cryptocurrency 3'
-            currencyPrice='$99.2'
-            icon={<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/2000px-Bitcoin.svg.png" alt=""/>}
-            currencyShortName='Sample 3'
-            trend='(8.54%) $33.47'
-            trendDirection={1}
-            chartData={[5, 5, 664, 9, 7, 55, 6, 1, 99, 6, 3, 4, 5, 6, 6]}
-            chartColor='#FF00FF'
-          />
-
-
-
+          </Col>
+          </Row>
         </DashboardMainCard>
-
+        
         <Row>
-          <Col size="md-3">
+          <Col size="md-4">
             <DashboardAsideLeft>
               <h3>Trending Articles</h3>
             </DashboardAsideLeft>
-
           </Col>
 
-          <Col size="md-3 sm-12">
+          <Col size="md-4">
             <DashboardAsideRight>
               <h3>Top Traders : </h3>
               <ul>
@@ -130,8 +90,7 @@ class Dashboard extends Component {
               </ul>
             </DashboardAsideRight>
           </Col>
-          <Col size="md-3 sm-6">
-
+          <Col size="md-4">
             <DashboardAsideRight>
               <h3>Search</h3>
               <Form>

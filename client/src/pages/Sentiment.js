@@ -1,13 +1,13 @@
 import React from "react";
 import { withStyles } from "@material-ui/core/styles";
-import Chart from "../components/Algo/chart";
-import Sentiment from "../components/Algo/Sentiment"
+import Chart from "../components/SentimentComponents/chart";
+import Sentiment from "../components/SentimentComponents/Sentiment"
 
 const styles = theme => ({
   "chart-container": {
     marginTop:10,
     height: 400,
-    width: "50%"
+    width: "100%"
   }
 });
 
@@ -101,6 +101,9 @@ class App extends React.Component {
   render() {
     const { classes } = this.props;
     return (
+      <div className="spacer">
+        <br></br>
+        <br></br>
       <div className={classes["chart-container"]}>
         <Chart
           data={this.state.lineChartData}
@@ -111,7 +114,7 @@ class App extends React.Component {
         
 
         />
-
+</div>
       </div>
 
     );

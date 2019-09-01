@@ -9,13 +9,11 @@ import Footer from "./components/Footer";
 // MAIN DASHBOARD
 import Dashboard from "./pages/Dashboard";
 import Index from "./pages/Index";
-import Algo from "./pages/Algo";
+import Sentiment from "./pages/Sentiment";
 import NoMatch from "./pages/NoMatch";
 import Signup from './pages/Signup'
 import Login from './pages/Login'
 import "./style.css"
-import Modal from 'react-bootstrap/Modal';
-import { Button } from 'react-bootstrap';
 
 class App extends Component {
   constructor() {
@@ -83,26 +81,17 @@ class App extends Component {
                 () => <Login alert={alert} updateUser={this.updateUser} />
               )}
             />
-
-      
-            <Route exact path="/algo/btc" render={ this.state.loggedIn ? 
-            
-
+            <Route exact path="/sentiment" render={ this.state.loggedIn ? 
             (
               // TERNARY EXPRESSION 
-              () => <Algo />
+              () => <Sentiment />
             ) : (
-              () => <Algo />
-              
-              
+              () => <Sentiment />
               // UNCOMMENT WHEN ROUTES FIXED -- > START
-
               // <Login updateUser={this.updateUser}/>
-
               // UNCOMMENT WHEN ROUTES FIXED -- > END
             )}
             />
-
             <Route component={NoMatch}/>
           </Switch>
           <Footer />
@@ -111,5 +100,4 @@ class App extends Component {
     );
   }
 }
-
 export default App;

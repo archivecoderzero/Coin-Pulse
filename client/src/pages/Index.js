@@ -21,7 +21,8 @@ class Index extends Component {
 
       <Container fluid>
         <br></br>
-
+        <br></br>
+        <br></br>
         {/* MAIN CARD START -----------------------> */}
         <Row>
         <br></br>

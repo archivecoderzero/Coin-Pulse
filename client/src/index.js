@@ -23,6 +23,5 @@ ReactDOM.render(
 		<App />
 	</BrowserRouter>
   </MuiThemeProvider>,
-
 	document.getElementById('root')
 )
