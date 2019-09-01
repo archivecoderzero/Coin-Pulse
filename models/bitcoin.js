@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const bitcoinSchema = new Schema({
-  price: { type: String, reqiuired: true },
+  price: { type: Number, reqiuired: true },
   date: { type: Date, default: Date.now }
 });
 

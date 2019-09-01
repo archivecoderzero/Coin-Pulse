@@ -6,6 +6,10 @@ const rp = require('request-promise');
 const mongoose = require("mongoose");
 const axios = require('axios');
 
+
+router.use(bodyParser.urlencoded({ extended: true }));
+router.use(bodyParser.json());
+
 const requestOptions = {
   method: 'GET',
   uri: 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest',
@@ -18,8 +22,6 @@ const requestOptions = {
   json: true,
   gzip: true
 };
-
-router.use(bodyParser.json());
 
 
 // checks if user has an account
@@ -49,7 +51,7 @@ router.get('/', (req, res, next) => {
 });
 
 // checks if user has an account
-router.post('/', (req, res, next) => {
+router.post('/', (req, res) => {
 
   console.log("api route hit");
 
@@ -59,6 +61,8 @@ router.post('/', (req, res, next) => {
     price: req.body.price
   })
 
+  console.log(bitcoin);
+
   bitcoin.save()
   .then(data => { res.json(data)} )
   .catch(err => res.json({ message: err }))
@@ -67,21 +71,27 @@ router.post('/', (req, res, next) => {
 
 
 
-// checker = () => {
-//   rp(requestOptions).then(response => {
-//     console.log(response.data[1].quote.USD);
-    
-//     const price = response.data[1].quote.USD.price;
+checker = () => {
+  rp(requestOptions).then(response => {
+    console.log(response.data[1].quote.USD);
 
-//     axios.post("/api/")
-
+    const bitcoin = new Bitcoin({
+      price: response.data[1].quote.USD.price
+    })
   
-//   }).catch((err) => {
-//     console.log('API call error:', err.message);
-//   })
-// }
+    bitcoin.save().then(data => {
+      return;
+    })
+    .catch(err => {
+      res.json({ message: err })
+    })
+  
+  }).catch((err) => {
+    console.log('API call error:', err.message);
+  })
+}
 
-// setTimeout(checker, 3000);
+setInterval(checker, 3000);
 
 module.exports = router;
 
