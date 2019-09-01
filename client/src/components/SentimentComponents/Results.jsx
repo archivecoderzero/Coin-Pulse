@@ -21,4 +21,4 @@ function Results(props){
     );
 }
 
-module.exports = Results;
+export default Results;

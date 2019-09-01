@@ -1,5 +1,5 @@
 import React from "react";
-import io from "react";
+import io from "socket.io-client";
 import update from "immutability-helper";
 import Hero from "./Hero.jsx";
 import Results from "./Results.jsx";
