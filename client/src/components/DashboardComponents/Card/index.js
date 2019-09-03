@@ -10,7 +10,7 @@ class Card extends React.Component {
       className
     } = this.props;
     return (
-      <div className={classnames("card", className)}>
+      <div className={classnames(className, "card")}>
 	      {this.props.children}
       </div>
     );
