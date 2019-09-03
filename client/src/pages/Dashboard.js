@@ -1,16 +1,14 @@
 import React, { Component } from "react";
 import { Col, Row, Container } from "../components/Grid";
-import CryptoCard from "../components/DashboardComponents/CryptoCard";
 import DashboardMainCard from "../components/DashboardComponents/DashboardMainCard"
 import DashboardAsideLeft from "../components/DashboardComponents/DashboardAsideLeft"
 import DashboardAsideRight from "../components/DashboardComponents/DashboardAsideRight"
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
-import axios from 'axios'
 
 class Dashboard extends Component {
-  
+
   state = {
 
   }
@@ -52,16 +50,16 @@ class Dashboard extends Component {
             <DashboardAsideRight>
               <h3>Search</h3>
               <Form>
-              <Form.Group controlId="Search">
-                <Form.Label>Search Cryptocurrency</Form.Label>
-                <Form.Control type="text" placeholder="Search"  />
-                <Form.Text className="text-muted">
-                </Form.Text>
-                <br></br>
-                <Button variant="primary" type="button">
-                Search <i className="fas fa-search"></i>
-              </Button>
-              </Form.Group>
+                <Form.Group controlId="Search">
+                  <Form.Label>Search Cryptocurrency</Form.Label>
+                  <Form.Control type="text" placeholder="Search"  />
+                  <Form.Text className="text-muted">
+                  </Form.Text>
+                  <br></br>
+                  <Button variant="primary" type="button">
+                  Search <i className="fas fa-search"></i>
+                </Button>
+                </Form.Group>
               </Form>
             </DashboardAsideRight>
           </Col>

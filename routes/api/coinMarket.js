@@ -5,8 +5,6 @@ const Bitcoin = require('../../models/bitcoin.js');
 const Litecoin = require('../../models/litecoin.js');
 const Ethereum = require('../../models/ethereum.js');
 const rp = require('request-promise');
-const mongoose = require("mongoose");
-const axios = require('axios');
 const db = require('../../models')
 
 
@@ -27,12 +25,11 @@ const requestOptions = {
 };
 
 
-// checks if user has an account
 router.get('/bitcoin', (req, res, next) => {
 
   db.Bitcoin.find({}).sort({ date: -1 })
     .then(function(dbBitcoin) {
-      // If all Users are successfully found, send them back to the client
+
       console.log("bitcoin api route hit");
       res.json(dbBitcoin);
     })
@@ -47,7 +44,6 @@ router.get('/ethereum', (req, res, next) => {
 
   db.Ethereum.find({}).sort({ date: -1 })
     .then(function(dbEthereum) {
-      // If all Users are successfully found, send them back to the client
       console.log("ethereum api route hit");
       res.json(dbEthereum);
     })
@@ -62,7 +58,6 @@ router.get('/litecoin', (req, res, next) => {
 
   db.Litecoin.find({}).sort({ date: -1 })
     .then(function(dbLitecoin) {
-      // If all Users are successfully found, send them back to the client
       console.log("litecoin api route hit");
       res.json(dbLitecoin);
     })

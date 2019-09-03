@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import CryptoCard from "../CryptoCard";
+import { Col, Row } from "../../Grid";
+
 import axios from 'axios'
 
 class DashboardMainCard extends Component {
@@ -59,6 +61,14 @@ class DashboardMainCard extends Component {
     return `$${num.toFixed(2)}`
   }
 
+  negativeCheck = (num, name) => {
+    if (num < 0) {
+      this.setState({
+        
+      })
+    }
+  }
+
 
   componentDidMount() {
 
@@ -68,6 +78,7 @@ class DashboardMainCard extends Component {
         let data = response.data;
         let currentPrice = this.displayCurrentPrice(data[0].price);
         let percent = this.convertPercent(data[0].percentChange24h, data[0].price);
+
         this.setState({
           bitcoinCurrentPrice: currentPrice,
           bitcoin24h: percent,
@@ -140,38 +151,44 @@ class DashboardMainCard extends Component {
 
   render() {
     return (
-      <div style={{ height: 650,  paddingTop: 10, marginTop: 0,  textAlign: "center"}} className="jumbotron">
-        <CryptoCard
-          currencyName='Bitcoin'
-          currencyPrice={this.state.bitcoinCurrentPrice}
-          icon={<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/2000px-Bitcoin.svg.png" alt=""/>}
-          currencyShortName='BTC'
-          trend={this.state.bitcoin24h}
-          trendDirection={1}
-          chartData={[this.state.bitcoin10, this.state.bitcoin9, this.state.bitcoin8, this.state.bitcoin7, this.state.bitcoin6, this.state.bitcoin5, this.state.bitcoin4, this.state.bitcoin3, this.state.bitcoin2, this.state.bitcoin1]}
-        />
-
-        <CryptoCard
-          currencyName='Ethereum'
-          currencyPrice={this.state.ethereumCurrentPrice}
-          icon={<img src="https://maxcdn.icons8.com/Share/icon/color/Logos/ethereum1600.png" alt=""/>}
-          currencyShortName='ETH'
-          trend={this.state.ethereum24h}
-          trendDirection={1}
-          chartData={[this.state.ethereum10, this.state.ethereum9, this.state.ethereum8, this.state.ethereum7, this.state.ethereum6, this.state.ethereum5, this.state.ethereum4, this.state.ethereum3, this.state.ethereum2, this.state.ethereum1]}
-          chartColor='#9b59b6'
-        />
-
-        <CryptoCard
-          currencyName='Litecoin'
-          currencyPrice={this.state.litecoinCurrentPrice}
-          icon={<img src="http://icons.iconarchive.com/icons/blackvariant/button-ui-requests-6/1024/LiteCoin-icon.png" alt=""/>}
-          currencyShortName='LTC'
-          trend={this.state.litecoin24h}
-          trendDirection={-1}
-          chartData={[this.state.litecoin10, this.state.litecoin9, this.state.litecoin8, this.state.litecoin7, this.state.litecoin6, this.state.litecoin5, this.state.litecoin4, this.state.litecoin3, this.state.litecoin2, this.state.litecoin1]}
-          chartColor='#ecf0f1'
-        /> 
+      <div className="jumbotron">
+        <Row>
+          <Col size="md-4 sm-12">        
+            <CryptoCard
+              currencyName='Bitcoin'
+              currencyPrice={this.state.bitcoinCurrentPrice}
+              icon={<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/2000px-Bitcoin.svg.png" alt=""/>}
+              currencyShortName='BTC'
+              trend={this.state.bitcoin24h}
+              trendDirection={ this.trend < 0 ? (-1):(1) }
+              chartData={[this.state.bitcoin10, this.state.bitcoin9, this.state.bitcoin8, this.state.bitcoin7, this.state.bitcoin6, this.state.bitcoin5, this.state.bitcoin4, this.state.bitcoin3, this.state.bitcoin2, this.state.bitcoin1]}
+            />
+          </Col>
+          <Col size="md-4 sm-12">        
+            <CryptoCard
+              currencyName='Ethereum'
+              currencyPrice={this.state.ethereumCurrentPrice}
+              icon={<img src="https://maxcdn.icons8.com/Share/icon/color/Logos/ethereum1600.png" alt=""/>}
+              currencyShortName='ETH'
+              trend={this.state.ethereum24h}
+              trendDirection={ this.trend < 0 ? (-1):(1) }
+              chartData={[this.state.ethereum10, this.state.ethereum9, this.state.ethereum8, this.state.ethereum7, this.state.ethereum6, this.state.ethereum5, this.state.ethereum4, this.state.ethereum3, this.state.ethereum2, this.state.ethereum1]}
+              chartColor='#9b59b6'
+            />
+          </Col>
+          <Col size="md-4 sm-12">        
+            <CryptoCard
+              currencyName='Litecoin'
+              currencyPrice={this.state.litecoinCurrentPrice}
+              icon={<img src="http://icons.iconarchive.com/icons/blackvariant/button-ui-requests-6/1024/LiteCoin-icon.png" alt=""/>}
+              currencyShortName='LTC'
+              trend={this.state.litecoin24h}
+              trendDirection={ this.trend < 0 ? (-1):(1) }
+              chartData={[this.state.litecoin10, this.state.litecoin9, this.state.litecoin8, this.state.litecoin7, this.state.litecoin6, this.state.litecoin5, this.state.litecoin4, this.state.litecoin3, this.state.litecoin2, this.state.litecoin1]}
+              chartColor='#ecf0f1'
+            /> 
+          </Col>
+        </Row>
      </div>
     );
   }
