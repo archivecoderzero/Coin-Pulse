@@ -11,41 +11,62 @@ import axios from 'axios'
 
 class Dashboard extends Component {
 
-  state = {
-    bitcoin1: "",
-    bitcoin2: "",
-    bitcoin3: "",
-    bitcoin4: "",
-    bitcoin5: "",
-    bitcoin6: "",
-    bitcoin7: "",
-    bitcoin8: "",
-    bitcoin9: "",
-    bitcoin10: "",
-    ethereum1: "",
-    ethereum2: "",
-    ethereum3: "",
-    ethereum4: "",
-    ethereum5: "",
-    ethereum6: "",
-    ethereum7: "",
-    ethereum8: "",
-    ethereum9: "",
-    ethereum10: "",
-    litecoin1: "",
-    litecoin2: "",
-    litecoin3: "",
-    litecoin4: "",
-    litecoin5: "",
-    litecoin6: "",
-    litecoin7: "",
-    litecoin8: "",
-    litecoin9: "",
-    litecoin10: ""
+  constructor() {
+    super()
+    this.state = {
+      bitcoinCurrentPrice: "",
+      bitcoin24h: "",
+      bitcoin1: "",
+      bitcoin2: "",
+      bitcoin3: "",
+      bitcoin4: "",
+      bitcoin5: "",
+      bitcoin6: "",
+      bitcoin7: "",
+      bitcoin8: "",
+      bitcoin9: "",
+      bitcoin10: "",
+      ethereumCurrentPrice: "",
+      ethereum24h: "",
+      ethereum1: "",
+      ethereum2: "",
+      ethereum3: "",
+      ethereum4: "",
+      ethereum5: "",
+      ethereum6: "",
+      ethereum7: "",
+      ethereum8: "",
+      ethereum9: "",
+      ethereum10: "",
+      litecoinCurrentPrice: "",
+      litecoin24h: "",
+      litecoin1: "",
+      litecoin2: "",
+      litecoin3: "",
+      litecoin4: "",
+      litecoin5: "",
+      litecoin6: "",
+      litecoin7: "",
+      litecoin8: "",
+      litecoin9: "",
+      litecoin10: ""
+    }
   }
 
   handleSubmit = event => {
     event.preventDefault()
+  }
+
+  convertPercent = (percent, baseNum) => {
+    const num = (baseNum*(percent/100)).toPrecision(5);
+    const precisePercent = percent.toPrecision(4)
+    // num = num.toPrecision(5);
+    // percent = percent.toPrecision(4);
+    return `(${precisePercent}%) $${num}`
+  }
+
+  displayCurrentPrice = num => {
+    return `$${num}`
   }
 
   componentDidMount() {
@@ -54,7 +75,11 @@ class Dashboard extends Component {
     .then(response => {
         console.log(response.data);
         let data = response.data;
+        let currentPrice = this.displayCurrentPrice(data[0].price);
+        let percent = this.convertPercent(data[0].percentChange24h, data[0].price);
         this.setState({
+          bitcoinCurrentPrice: currentPrice,
+          bitcoin24h: percent,
           bitcoin1: data[0].price,
           bitcoin2: data[1].price,
           bitcoin3: data[2].price,
@@ -75,7 +100,11 @@ class Dashboard extends Component {
     .then(response => {
         console.log(response);
         let data = response.data;
+        let currentPrice = this.displayCurrentPrice(data[0].price);
+        let percent = this.convertPercent(data[0].percentChange24h, data[0].price);
         this.setState({
+          ethereumCurrentPrice: currentPrice,
+          ethereum24h: percent,
           ethereum1: data[0].price,
           ethereum2: data[1].price,
           ethereum3: data[2].price,
@@ -96,7 +125,11 @@ class Dashboard extends Component {
     .then(response => {
         console.log(response);
         let data = response.data;
+        let currentPrice = this.displayCurrentPrice(data[0].price);
+        let percent = this.convertPercent(data[0].percentChange24h, data[0].price);
         this.setState({
+          litecoinCurrentPrice: currentPrice,
+          litecoin24h: percent,
           litecoin1: data[0].price,
           litecoin2: data[1].price,
           litecoin3: data[2].price,
@@ -121,20 +154,20 @@ class Dashboard extends Component {
         <DashboardMainCard>
             <CryptoCard
               currencyName='Bitcoin'
-              currencyPrice='$8850.32'
+              currencyPrice={this.state.bitcoinCurrentPrice}
               icon={<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/2000px-Bitcoin.svg.png" alt=""/>}
               currencyShortName='BTC'
-              trend='(8.54%) $563.47'
+              trend={this.state.bitcoin24h}
               trendDirection={1}
               chartData={[this.state.bitcoin10, this.state.bitcoin9, this.state.bitcoin8, this.state.bitcoin7, this.state.bitcoin6, this.state.bitcoin5, this.state.bitcoin4, this.state.bitcoin3, this.state.bitcoin2, this.state.bitcoin1]}
             />
 
             <CryptoCard
               currencyName='Ethereum'
-              currencyPrice='$766.12'
+              currencyPrice={this.state.ethereumCurrentPrice}
               icon={<img src="https://maxcdn.icons8.com/Share/icon/color/Logos/ethereum1600.png" alt=""/>}
               currencyShortName='ETH'
-              trend='(7.32%) $14.94'
+              trend={this.state.ethereum24h}
               trendDirection={1}
               chartData={[this.state.ethereum10, this.state.ethereum9, this.state.ethereum8, this.state.ethereum7, this.state.ethereum6, this.state.ethereum5, this.state.ethereum4, this.state.ethereum3, this.state.ethereum2, this.state.ethereum1]}
               chartColor='#9b59b6'
@@ -142,10 +175,10 @@ class Dashboard extends Component {
 
             <CryptoCard
               currencyName='Litecoin'
-              currencyPrice='$137.92'
+              currencyPrice={this.state.litecoinCurrentPrice}
               icon={<img src="http://icons.iconarchive.com/icons/blackvariant/button-ui-requests-6/1024/LiteCoin-icon.png" alt=""/>}
               currencyShortName='LTC'
-              trend='(-5.12%) $6.34'
+              trend={this.state.litecoin24h}
               trendDirection={-1}
               chartData={[this.state.litecoin10, this.state.litecoin9, this.state.litecoin8, this.state.litecoin7, this.state.litecoin6, this.state.litecoin5, this.state.litecoin4, this.state.litecoin3, this.state.litecoin2, this.state.litecoin1]}
               chartColor='#ecf0f1'

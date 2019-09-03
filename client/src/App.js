@@ -15,8 +15,6 @@ import NoMatch from "./pages/NoMatch";
 import Signup from './pages/Signup'
 import Login from './pages/Login'
 import "./style.css"
-import Modal from 'react-bootstrap/Modal';
-import { Button } from 'react-bootstrap';
 
 class App extends Component {
   constructor() {

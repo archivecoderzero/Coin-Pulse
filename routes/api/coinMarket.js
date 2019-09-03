@@ -75,19 +75,24 @@ router.get('/litecoin', (req, res, next) => {
 
 checker = () => {
   rp(requestOptions).then(response => {
+    console.log(response.data[1]);
     console.log(response.data[2]);
     console.log(response.data[1027]);
 
     const bitcoin = new Bitcoin({
-      price: response.data[1].quote.USD.price
+      price: response.data[1].quote.USD.price,
+      percentChange24h: response.data[1].quote.USD.percent_change_24h
+
     })
 
     const litecoin = new Litecoin({
-      price: response.data[2].quote.USD.price
+      price: response.data[2].quote.USD.price,
+      percentChange24h: response.data[2].quote.USD.percent_change_24h
     })
 
     const ethereum = new Ethereum({
-      price: response.data[1027].quote.USD.price
+      price: response.data[1027].quote.USD.price,
+      percentChange24h: response.data[1027].quote.USD.percent_change_24h
     })
   
     bitcoin.save().then(data => {
