@@ -9,9 +9,6 @@ import CryptoChart from './CryptoChart';
 import './styles.scss';
 
 class CryptoCard extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     let {

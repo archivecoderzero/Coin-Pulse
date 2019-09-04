@@ -2,10 +2,11 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const bitcoinSchema = new Schema({
-  price: { type: [String] },
+  price: { type: Number },
+  percentChange24h: { type: Number },
   date: { type: Date, default: Date.now }
 });
 
-const Book = mongoose.model("Book", bitcoinSchema);
+const Bitcoin = mongoose.model("Bitcoin", bitcoinSchema);
 
-module.exports = Book;
+module.exports = Bitcoin;

@@ -4,16 +4,13 @@ import classnames from 'classnames';
 import './styles.scss';
 
 class Card extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   
   render() {
     let {
       className
     } = this.props;
     return (
-      <div className={classnames("card", className)}>
+      <div className={classnames(className, "card")}>
 	      {this.props.children}
       </div>
     );
