@@ -192,6 +192,7 @@ class DashboardMainCard extends Component {
      </div>
     );
   }
+
 }
 
 export default DashboardMainCard;

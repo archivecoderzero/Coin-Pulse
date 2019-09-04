@@ -1,0 +1,14 @@
+.jumbotron {
+    background-color: rgb(190, 207, 194);
+    width: 100%;
+    padding-right: 5%;
+    padding-left: 5%;
+    height: 650px;
+    padding-top: 10px;
+    margin-top: 0px;
+    text-align: center;
+}
+
+body {
+    background-color: purple;
+}
