@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import logo from "./logo.png";
 
 // INDEX COMPONENT ----> START
 import MainCard from "../components/IndexComponents/MainCard";
@@ -8,6 +9,7 @@ import SignupCard from "../components/IndexComponents/SignupCard";
 // INDEX COMPONENT ----> END
 
 import { Col, Row, Container } from "../components/Grid";
+import './style.css';
 
 class Index extends Component {
 
@@ -27,7 +29,7 @@ class Index extends Component {
         <br></br>
           <Col size="md-12">
             <MainCard>
-              <h1>MAIN </h1>
+            <img className="Logo" src={logo} alt="logo" />;
             </MainCard>
           </Col>
           <br></br>
@@ -39,7 +41,7 @@ class Index extends Component {
         <Row>
           <Col size="md-12">
             <AboutCard>
-              <h1>ABOUT</h1>
+              <h1 style={{color: "white"}}>ABOUT</h1>
             </AboutCard>
           </Col>
           <br></br>
@@ -50,7 +52,7 @@ class Index extends Component {
         <Row>
           <Col size="md-12">
             <DevsCard>
-              <h1>DEVS </h1>
+              <h1 style={{color: "white"}}>DEVS </h1>
             </DevsCard>
           </Col>
           <br></br>
@@ -61,7 +63,7 @@ class Index extends Component {
           <Row>
           <Col size="md-12">
             <SignupCard>
-              <h1>Sign-up </h1>
+              <h1 style={{color: "white"}}>Sign-up </h1>
             </SignupCard>
           </Col>
           <br></br>
