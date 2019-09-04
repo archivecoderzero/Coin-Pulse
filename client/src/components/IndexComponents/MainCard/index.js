@@ -5,7 +5,7 @@ function Main({ children }) {
   return (
     <div
       style={{ height: 750, clear: "both",  paddingTop: 300, textAlign: "center" }}
-      className="jumbotron"
+      className="mainJumbotron"
     >
       {children}
     </div>
