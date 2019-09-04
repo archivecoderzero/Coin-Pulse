@@ -26,7 +26,6 @@
     "babel-preset-react": "^6.3.13",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
-    "bufferutil": "^1.2.1",
     "classnames": "^2.2.3",
     "coinmarketcap-api": "^3.0.1",
     "connect-mongo": "^3.0.0",
@@ -53,8 +52,7 @@
     "socket.io-client": "^1.7.4",
     "spectre.css": "^0.5.8",
     "twit": "^2.2.11",
-    "underscore": "^1.8.3",
-    "utf-8-validate": "^1.2.1"
+    "underscore": "^1.8.3"
   },
   "proxy": "http://localhost:8080"
 }
