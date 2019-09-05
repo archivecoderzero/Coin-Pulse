@@ -23,7 +23,7 @@ class CryptoChart extends React.Component {
 
     let data = {
       datasets,
-      labels: Object.keys(chartData)
+      labels: chartData
     };
 
     const dataFun = canvas => {
