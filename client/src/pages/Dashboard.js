@@ -22,8 +22,9 @@ class Dashboard extends Component {
       <Container fluid>
         <DashboardMainCard />
 
+
         <Row>
-          <Col size="md-6 sm-12">
+          <Col size="md-3">
             <DashboardAsideLeft>
               <h3>Trending Articles</h3>
             </DashboardAsideLeft>

@@ -58,7 +58,13 @@ class Navbar extends Component {
                     </header>
                 ) : (
                 <header className="navbar App-header" id="nav-container"> 
-                    <div className="col-3">
+                 <div className="col-1">
+                        <div id="top-filler"></div>
+                        <Link to="/" className="navbar-brand">
+                        Satoshi-Pulse <i className="fab fa-bitcoin"></i>
+                        </Link>
+                    </div>
+                    <div className="col-4">
                         <section className="navbar-section">
                             <Link to="/" className="btn btn-link text-secondary">
                                 <span className="text-secondary">home</span>
@@ -71,12 +77,7 @@ class Navbar extends Component {
                                 </Link>
                         </section>
                     </div>
-                    <div className="col-6">
-                        <div id="top-filler"></div>
-                        <Link to="/" className="navbar-brand">
-                        Satoshi-Pulse <i className="fab fa-bitcoin"></i>
-                        </Link>
-                    </div>
+                   
                     <div className="col-3" > 
 
                     </div>

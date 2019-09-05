@@ -9,7 +9,6 @@ import Footer from "./components/Footer";
 // MAIN DASHBOARD
 import Dashboard from "./pages/Dashboard";
 import Index from "./pages/Index";
-import Detail from "./pages/Detail";
 import Algo from "./pages/Algo";
 import NoMatch from "./pages/NoMatch";
 import Signup from './pages/Signup'
@@ -82,15 +81,26 @@ class App extends Component {
                 () => <Login alert={alert} updateUser={this.updateUser} />
               )}
             />
-            <Route exact path="/profile/:id" component={Detail} />
+
+      
             <Route exact path="/algo/btc" render={ this.state.loggedIn ? 
+            
+
             (
+              // TERNARY EXPRESSION 
               () => <Algo />
             ) : (
-              () => <Login updateUser={this.updateUser}/>
+              () => <Algo />
+              
+              
+              // UNCOMMENT WHEN ROUTES FIXED -- > START
+
+              // <Login updateUser={this.updateUser}/>
+
+              // UNCOMMENT WHEN ROUTES FIXED -- > END
             )}
             />
-            <Route exact path="/currency/:id" component={Detail} />
+
             <Route component={NoMatch}/>
           </Switch>
           <Footer />

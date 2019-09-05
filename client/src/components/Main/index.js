@@ -4,7 +4,7 @@ function Main() {
   return (
 
     <div
-      style={{ height: 300, clear: "both", paddingTop: 120, textAlign: "center" }}
+      style={{ height: 300, clear: "both", paddingTop: 120, textAlign: "center"}}
       className="cointainer-flex"
     >
 
