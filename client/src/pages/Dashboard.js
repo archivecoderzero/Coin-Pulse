@@ -6,10 +6,10 @@ import DashboardAsideRight from "../components/DashboardComponents/DashboardAsid
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
-
 class Dashboard extends Component {
 
   state = {
+
 
   }
 
@@ -19,19 +19,20 @@ class Dashboard extends Component {
 
   render() {
     return (
+
       <Container fluid>
         <DashboardMainCard />
 
 
+
         <Row>
-          <Col size="md-3">
+          <Col size="md-4">
             <DashboardAsideLeft>
               <h3>Trending Articles</h3>
             </DashboardAsideLeft>
-
           </Col>
 
-          <Col size="md-3 sm-12">
+          <Col size="md-4">
             <DashboardAsideRight>
               <h3>Top Traders : </h3>
               <ul>
@@ -46,8 +47,7 @@ class Dashboard extends Component {
               </ul>
             </DashboardAsideRight>
           </Col>
-          <Col size="md-3 sm-6">
-
+          <Col size="md-4">
             <DashboardAsideRight>
               <h3>Search</h3>
               <Form>

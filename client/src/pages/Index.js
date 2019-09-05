@@ -12,6 +12,9 @@ import { Col, Row, Container } from "../components/Grid";
 import './style.css';
 import Signup from './Signup';
 
+
+var d3 = require('d3');
+
 class Index extends Component {
 
   componentDidMount() {
@@ -24,7 +27,8 @@ class Index extends Component {
 
       <Container fluid>
         <br></br>
-
+        <br></br>
+        <br></br>
         {/* MAIN CARD START -----------------------> */}
         <Row>
         <br></br>
