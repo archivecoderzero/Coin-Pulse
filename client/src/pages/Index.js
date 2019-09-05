@@ -10,6 +10,7 @@ import SignupCard from "../components/IndexComponents/SignupCard";
 
 import { Col, Row, Container } from "../components/Grid";
 import './style.css';
+import Signup from './Signup';
 
 class Index extends Component {
 
@@ -41,7 +42,7 @@ class Index extends Component {
         <Row>
           <Col size="md-12">
             <AboutCard>
-              <h1 style={{color: "white"}}>ABOUT</h1>
+              <h2 style={{color: "white"}}>ABOUT</h2>
             </AboutCard>
           </Col>
           <br></br>
@@ -52,7 +53,7 @@ class Index extends Component {
         <Row>
           <Col size="md-12">
             <DevsCard>
-              <h1 style={{color: "white"}}>DEVS </h1>
+              <h1 style={{color: "white"}}>Meet the Team </h1>
             </DevsCard>
           </Col>
           <br></br>
@@ -64,6 +65,7 @@ class Index extends Component {
           <Col size="md-12">
             <SignupCard>
               <h1 style={{color: "white"}}>Sign-up </h1>
+              <Signup />
             </SignupCard>
           </Col>
           <br></br>

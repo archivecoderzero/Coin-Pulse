@@ -1,9 +1,11 @@
-.raphael {
-    background-image: url(logo/Raphael.png);
+.dev {
+    width: 100px;
+    height: 80px;
+    border: 2px solid pink;
+    border-radius: 50%;
 }
-.zia {
-    background-image: url(logo/Zia.png);
-}
-.alex {
-    background-image: url(logo/Alex.png);
+#container {
+    text-align: center;
+    margin-right: 100px;
+    margin-left: 100px;
 }

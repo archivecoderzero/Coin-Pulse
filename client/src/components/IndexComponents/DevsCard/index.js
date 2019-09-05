@@ -1,6 +1,8 @@
 import React from "react";
-// import logo from "./logo";
-// import "./style.css";
+import "./Image/Alex.png";
+import "./Image/Raphael.png";
+import "./Image/Zia.png";
+import "./style.css";
 
 function DevsCard({ children }) {
   return (
@@ -9,20 +11,29 @@ function DevsCard({ children }) {
       className="jumbotron"
     >
      <div className="team">{children}</div>
-      {/* <div className="devSection">  
-        <div>
-          <div className="raphael"></div>
-          <h4>Raphael</h4>
+      <div className="row" id="container">  
+        <div className="col-sm-4">
+          <div >
+          <img className="dev" src={require('./Image/Raphael.png')} />
+          </div>
+          <h4 style={{color: "palevioletred"}}>Raphael</h4>
+          <h6 style={{color: "pink"}}>Full Stack Web Developer</h6>
         </div>
-        <div>
-          <div className="zia"></div>
-        <h4>Zia</h4>
+        <div className="col-sm-4">
+          <div>
+          <img className="dev" src={require('./Image/Zia.png')} />
+          </div>
+        <h4 style={{color: "palevioletred"}}>Zia</h4>
+        <h6 style={{color: "pink"}}>Full Stack Web Developer</h6>
         </div>
-        <div>
-          <div className="alex"></div>
-        <h4>Alex</h4>
+        <div className="col-sm-4">
+          <div >
+          <img className="dev" src={require('./Image/Alex.png')} />
+          </div>
+        <h4 style={{color: "palevioletred"}}>Alex</h4>
+        <h6 style={{color: "pink"}}>Full Stack Web Developer</h6>
         </div>
-      </div> */}
+      </div>
 
     </div>
   );
