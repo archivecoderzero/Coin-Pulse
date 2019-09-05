@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import logo from "./logo.png";
 
 // INDEX COMPONENT ----> START
 import MainCard from "../components/IndexComponents/MainCard";
@@ -8,6 +9,8 @@ import SignupCard from "../components/IndexComponents/SignupCard";
 // INDEX COMPONENT ----> END
 
 import { Col, Row, Container } from "../components/Grid";
+import './style.css';
+import Signup from './Signup';
 
 
 var d3 = require('d3');
@@ -31,7 +34,7 @@ class Index extends Component {
         <br></br>
           <Col size="md-12">
             <MainCard>
-              <h1>MAIN </h1>
+            <img className="Logo" src={logo} alt="logo" />;
             </MainCard>
           </Col>
           <br></br>
@@ -43,7 +46,7 @@ class Index extends Component {
         <Row>
           <Col size="md-12">
             <AboutCard>
-              <h1>ABOUT</h1>
+              <h2 style={{color: "white"}}>ABOUT</h2>
             </AboutCard>
           </Col>
           <br></br>
@@ -54,7 +57,7 @@ class Index extends Component {
         <Row>
           <Col size="md-12">
             <DevsCard>
-              <h1>DEVS </h1>
+              <h1 style={{color: "white"}}>Meet the Team </h1>
             </DevsCard>
           </Col>
           <br></br>
@@ -65,7 +68,8 @@ class Index extends Component {
           <Row>
           <Col size="md-12">
             <SignupCard>
-              <h1>Sign-up </h1>
+              <h1 style={{color: "white"}}>Sign-up </h1>
+              <Signup />
             </SignupCard>
           </Col>
           <br></br>

@@ -17,7 +17,6 @@ import Signup from './pages/Signup'
 import Login from './pages/Login'
 import "./style.css"
 
-
 class App extends Component {
   constructor() {
     super()

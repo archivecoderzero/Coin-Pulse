@@ -1,0 +1,11 @@
+.dev {
+    width: 100px;
+    height: 80px;
+    border: 2px solid pink;
+    border-radius: 50%;
+}
+#container {
+    text-align: center;
+    margin-right: 100px;
+    margin-left: 100px;
+}
