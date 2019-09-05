@@ -33,7 +33,12 @@
   
 }
 #top-filler {
-  margin-bottom: auto;
+  margin-bottom: auto
+}
+.navbar-brand {
+  color: white;
+  float: left;
+  margin: 0%;
 }
 
 #nav-container {
@@ -42,6 +47,7 @@
 .navbar-section {
   float: right;
   margin-bottom: 1rem;
+
 }
 
 @keyframes App-logo-spin {
