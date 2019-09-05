@@ -1,7 +1,6 @@
 var React = require('react');
 
 var TwitterActivityChart = require('./TwitterActivityChart.jsx');
-var d3 = require('d3');
 var createReactClass = require('create-react-class');
 
 

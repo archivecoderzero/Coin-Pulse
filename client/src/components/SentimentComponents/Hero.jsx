@@ -1,8 +1,6 @@
 import React from "react";
 import SearchForm from "./parts/SearchForm.jsx";
 
-
-
 function Hero(props){
   return(
       <div className="hero container-fluid">

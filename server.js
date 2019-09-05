@@ -49,7 +49,6 @@ app.use(user)
 //##SocketIO Server --> START
 var server = app.listen(socketPort);
 console.log('Socket IO ON port --> : %s', socketPort);
-
 var io = require('socket.io').listen(server);
 var connections = [];
 //Create socket.io Connection with Client

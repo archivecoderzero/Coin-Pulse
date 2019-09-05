@@ -21,7 +21,6 @@ class Sentiment extends React.Component {
           negTotal: 0, neutTotal: 0},
       sentiment: 'Neutral'  
     };
-
     this.emit = this.emit.bind(this);
     this.initTimestamp = this.initTimestamp.bind(this);
   }
@@ -29,7 +28,6 @@ class Sentiment extends React.Component {
   //Incoming Data from Server Handlers
   componentWillMount() {
     var self = this;
-
     this.socket = io.connect();
     this.socket.on('connect', this.connect.bind(this));
     this.socket.on('disconnect', this.disconnect.bind(this));
