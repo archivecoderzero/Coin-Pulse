@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import { Col, Row, Container } from "../components/Grid";
+import "./signup.css"
+
 
 class Signup extends Component {
 	constructor() {
@@ -46,52 +49,67 @@ class Signup extends Component {
 	}
 
 
-render() {
-	return (
-		<div className="SignupForm">
-			<form className="form-horizontal">
-				<div className="form-group">
-					<div className="col-1 col-ml-auto">
-						<label className="form-label" htmlFor="username">Username</label>
-					</div>
-					<div className="col-3 col-mr-auto">
-						<input className="form-input"
-							type="text"
-							id="username"
-							name="username"
-							placeholder="Username"
-							value={this.state.username}
-							onChange={this.handleChange}
-						/>
-					</div>
-				</div>
-				<div className="form-group">
-					<div className="col-1 col-ml-auto">
-						<label className="form-label" htmlFor="password">Password: </label>
-					</div>
-					<div className="col-3 col-mr-auto">
-						<input className="form-input"
-							placeholder="password"
-							type="password"
-							name="password"
-							value={this.state.password}
-							onChange={this.handleChange}
-						/>
-					</div>
-				</div>
-				<div className="form-group ">
-					<div className="col-7"></div>
-					<button
-						className="btn btn-primary col-1 col-mr-auto"
-						onClick={this.handleSubmit}
-						type="submit"
-					>Sign up</button>
-				</div>
-			</form>
-		</div>
+	render() {
+		return (
 
-	)
-}
+			<div id="body" className="SignupForm">
+				<Container>
+					<p id="logIn">Create an Account</p>
+					<form className="form-horizontal">
+						<div className="form-group">
+							<div className="col-1 col-ml-auto">
+								<label className="form-label" htmlFor="username">Username</label>
+							</div>
+							<div className="col-4 col-mr-auto">
+								<input className="form-input"
+									type="text"
+									id="username"
+									name="username"
+									placeholder="Username"
+									value={this.state.username}
+									onChange={this.handleChange}
+								/>
+							</div>
+						</div>
+						<div className="form-group">
+							<div className="col-1 col-ml-auto">
+								<label className="form-label" htmlFor="password">Password: </label>
+							</div>
+							<div className="col-4 col-mr-auto">
+								<input className="form-input"
+									placeholder="password"
+									id="password"
+									type="password"
+									name="password"
+									value={this.state.password}
+									onChange={this.handleChange}
+								/>
+							</div>
+						</div>
+						<div id="rememberMeDiv" class="form-group form-group-accept">
+							<div id="rememberMe">
+								<span class="remember-me"> We are committed to complying with all U.S. regulations that help prevent, detect and remediate unlawful behavior by customers and virtual currency developers when using the Satoshi-Pulse trading platform or any of the company’s other services. Satoshi-Pulse is not a regulated exchange under U.S. securities laws. </span>
+							</div>
+						</div>
+
+						<div className="form-group ">
+							<button
+								className="btn btn-primary col-mr-auto"
+								id="btn"
+								onClick={this.handleSubmit}
+								type="submit">Create Account
+							</button>
+						</div>
+					</form>
+					<p class="section-register-footer">
+						<span>Already have an account? </span>
+						<a class="signUpLink" href="/login">Log In</a>
+					</p>
+				</Container>
+			</div>
+
+		)
+	}
 }
 
 export default Signup
