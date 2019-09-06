@@ -49,11 +49,6 @@ class Signup extends Component {
 render() {
 	return (
 		<div className="SignupForm">
-			        <br></br>
-					<br></br>
-					<br></br>
-
-			<h4>Sign up</h4>
 			<form className="form-horizontal">
 				<div className="form-group">
 					<div className="col-1 col-ml-auto">

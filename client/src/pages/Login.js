@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
-import './style.css';
+import './login.css';
 class Login extends Component {
     constructor() {
         super()
@@ -57,17 +57,13 @@ class Login extends Component {
             })
     }
     
-
     render() {
         if (this.state.redirectTo) {
             return <Redirect to={{ pathname: this.state.redirectTo }} />
         } else {
             return (
-                <div>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                    <h4>Login</h4>
+                <div id="body">
+                    <p id="logIn">Log In</p>
                     <form className="form-horizontal">
                         <div className="form-group">
                             <div className="col-1 col-ml-auto">
