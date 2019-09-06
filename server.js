@@ -18,8 +18,14 @@ const PORT = process.env.PORT || 8000;
 const user = require('./routes')
 
 
-// ## Routes and Serve Static Files
-app.use(express.static(__dirname + './client/public'));
+// // ## Routes and Serve Static Files
+// app.use(express.static(__dirname + './client/public'));
+
+app.get("/", function(req, res) {
+	res.json(path.join(__dirname, "public/index.html"));
+  });
+
+
 
 // MIDDLEWARE
 app.use(morgan('dev'))
@@ -100,23 +106,20 @@ io.sockets.on('connection', function(socket) {
 
 
 
-mongoose.Promise = global.Promise
+//mongoose.Promise = global.Promise
 
 //your local database url
 //27017 is the default mongoDB port
 const uri = 'mongodb://localhost:27017/coin-pulse' || process.env.MONGODB_URI;
-
 mongoose.connect(uri).then(
     () => { 
         /** ready to use. The `mongoose.connect()` promise resolves to undefined. */ 
         console.log('Connected to Mongo');
-        
     },
     err => {
          /** handle initial connection error */ 
          console.log('error connecting to Mongo: ')
          console.log(err);
-         
         }
   );
 
