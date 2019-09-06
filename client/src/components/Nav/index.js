@@ -37,19 +37,25 @@ class Navbar extends Component {
                 {/* displays a different navbar */}
                 {loggedIn ? ( 
                     <header className="navbar App-header" id="nav-container"> 
-                        <div className="col-3">
-                            <section className="navbar-section">
-                                <Link to="/dashboard" className="btn btn-link text-secondary">
-                                <span className="text-secondary">Dashboard</span></Link>
-                            </section>    
-                        </div>
-                        <div className="col-6">
+                      <div className="col-1">
                             <div id="top-filler"></div>
                             <Link to="/dashboard" className="navbar-brand" >
                             Satoshi-Pulse <i className="fab fa-bitcoin"></i>
                             </Link>
                         </div>
-                        <div className="col-3" >        
+                         <div className="col-1">
+                            <section className="navbar-section">
+                                <Link to="/sentiment" className="btn btn-link text-secondary">
+                                <span className="text-secondary">Sentiment</span></Link>
+                            </section>    
+                        </div>
+                        <div className="col-1">
+                            <section className="navbar-section">
+                                <Link to="/dashboard" className="btn btn-link text-secondary">
+                                <span className="text-secondary">Dashboard</span></Link>
+                            </section>    
+                        </div>
+                        <div className="col-6" >        
                             <section className="navbar-section">
                                 <div to="/dashboard" className="btn btn-link text-secondary" onClick={this.logout}>
                                 <span className="text-secondary">logout</span></div>

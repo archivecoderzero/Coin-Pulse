@@ -36,7 +36,7 @@
   margin-bottom: auto
 }
 .navbar-brand {
-  color: white;
+  color: white !important;
   float: left;
   margin: 0%;
 }
