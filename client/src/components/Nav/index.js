@@ -45,14 +45,14 @@ class Navbar extends Component {
                         </div>
                         <div className="col-6">
                             <div id="top-filler"></div>
-                            <Link to="/dashboard" className="navbar-brand" >
+                            <Link to="/dashboard" className="navbar-brand logo" >
                             Satoshi-Pulse <i className="fab fa-bitcoin"></i>
                             </Link>
                         </div>
                         <div className="col-3" >        
                             <section className="navbar-section">
                                 <div to="/dashboard" className="btn btn-link text-secondary" onClick={this.logout}>
-                                <span className="text-secondary">logout</span></div>
+                                <span className="text-secondary">Logout</span></div>
                             </section>                        
                         </div>        
                     </header>
@@ -60,20 +60,20 @@ class Navbar extends Component {
                 <header className="navbar App-header" id="nav-container"> 
                  <div className="col-1">
                         <div id="top-filler"></div>
-                        <Link to="/" className="navbar-brand">
+                        <Link to="/" className="navbar-brand logo">
                         Satoshi-Pulse <i className="fab fa-bitcoin"></i>
                         </Link>
                     </div>
                     <div className="col-4">
                         <section className="navbar-section">
                             <Link to="/" className="btn btn-link text-secondary">
-                                <span className="text-secondary">home</span>
+                                <span className="text-secondary">Home</span>
                                 </Link>
                             <Link to="/login" className="btn btn-link text-secondary">
-                            <span className="text-secondary">login</span>
+                            <span className="text-secondary">Login</span>
                                 </Link>
                             <Link to="/signup" className="btn btn-link">
-                            <span className="text-secondary">sign up</span>
+                            <span className="text-secondary">Sign up</span>
                                 </Link>
                         </section>
                     </div>

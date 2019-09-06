@@ -98,8 +98,8 @@ class Login extends Component {
                             <div id="rememberMeDiv" class="form-group form-group-accept">
                                 <div id="rememberMe">
                                     <input type="checkbox" ></input>
-                                    <span class="remember-me"> Remember me   | </span>
-                                    <a class="forgot-pwd signUpLink" href="/Account/PasswordReset">Forgot password?</a>
+                                    <span className="remember-me"> Remember me   | </span>
+                                    <a className="forgot-pwd signUpLink" href="/Account/PasswordReset">Forgot password?</a>
                                 </div>
                             </div>
                             
@@ -113,7 +113,7 @@ class Login extends Component {
                             </div>
                         </form>
                         <hr></hr>
-                        <p class="section-register-footer">
+                        <p className="section-register-footer">
                         <span>Don't have an account? </span>
                         <a class="signUpLink" href="/account/Register">Sign Up</a>
                         </p>

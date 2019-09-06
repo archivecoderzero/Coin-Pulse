@@ -9,8 +9,7 @@ import SignupCard from "../components/IndexComponents/SignupCard";
 // INDEX COMPONENT ----> END
 
 import { Col, Row, Container } from "../components/Grid";
-import './style.css';
-import Signup from './Signup';
+import './index.css';
 
 
 class Index extends Component {
@@ -24,18 +23,11 @@ class Index extends Component {
 
 
       <Container fluid>
-        <br></br>
-        <br></br>
-        <br></br>
         {/* MAIN CARD START -----------------------> */}
         <Row>
-        <br></br>
-          <Col size="md-12">
-            <MainCard>
+          <div id="main">
             <img className="Logo" src={logo} alt="logo" />;
-            </MainCard>
-          </Col>
-          <br></br>
+          </div>
         </Row>
         {/* MAIN CARD END -----------------------> */}
 
@@ -67,7 +59,6 @@ class Index extends Component {
           <Col size="md-12">
             <SignupCard>
               <h1 style={{color: "white"}}>Sign-up </h1>
-              <Signup />
             </SignupCard>
           </Col>
           <br></br>
