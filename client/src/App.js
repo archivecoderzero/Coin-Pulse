@@ -66,8 +66,6 @@ class App extends Component {
 
   render() {
     return (
-
-
       <Router>
         <div className="App">
           <Nav updateUser={this.updateUser} loggedIn={this.state.loggedIn} />

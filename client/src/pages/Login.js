@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
-import './style.css';
+import './login.css';
+import { Col, Row, Container } from "../components/Grid";
+
 class Login extends Component {
     constructor() {
         super()
@@ -57,56 +59,72 @@ class Login extends Component {
             })
     }
     
-
     render() {
         if (this.state.redirectTo) {
             return <Redirect to={{ pathname: this.state.redirectTo }} />
         } else {
             return (
-                <div>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                    <h4>Login</h4>
-                    <form className="form-horizontal">
-                        <div className="form-group">
-                            <div className="col-1 col-ml-auto">
-                                <label className="form-label" htmlFor="username">Username</label>
+                <div id="body">
+                    <Container>
+                        <p id="logIn">Log In</p>
+                        <form className="form-horizontal">
+                            <div className="form-group">
+                                <div className="col-1 col-ml-auto">
+                                    <label className="form-label" htmlFor="username">Username</label>
+                                </div>
+                                <div className="col-4 col-mr-auto">
+                                    <input className="form-input"
+                                        type="text"
+                                        id="username"
+                                        name="username"
+                                        placeholder="Username"
+                                        value={this.state.username}
+                                        onChange={this.handleChange}
+                                    />
+                                </div>
                             </div>
-                            <div className="col-3 col-mr-auto">
-                                <input className="form-input"
-                                    type="text"
-                                    id="username"
-                                    name="username"
-                                    placeholder="Username"
-                                    value={this.state.username}
-                                    onChange={this.handleChange}
-                                />
+                            <div className="form-group">
+                                <div className="col-1 col-ml-auto">
+                                    <label className="form-label" htmlFor="password">Password: </label>
+                                </div>
+                                <div className="col-4 col-mr-auto">
+                                    <input className="form-input"
+                                        placeholder="password"
+                                        id="password"
+                                        type="password"
+                                        name="password"
+                                        value={this.state.password}
+                                        onChange={this.handleChange}
+                                    />
+                                </div>
                             </div>
-                        </div>
-                        <div className="form-group">
-                            <div className="col-1 col-ml-auto">
-                                <label className="form-label" htmlFor="password">Password: </label>
+
+
+
+
+                            <div id="rememberMeDiv" class="form-group form-group-accept">
+                                <div id="rememberMe">
+                                    <input type="checkbox" ></input>
+                                    <span class="remember-me"> Remember me   | </span>
+                                    <a class="forgot-pwd" href="/Account/PasswordReset">Forgot password?</a>
+                                </div>
                             </div>
-                            <div className="col-3 col-mr-auto">
-                                <input className="form-input"
-                                    placeholder="password"
-                                    type="password"
-                                    name="password"
-                                    value={this.state.password}
-                                    onChange={this.handleChange}
-                                />
+                            
+                            <div className="form-group ">
+                                <button
+                                    className="btn btn-primary col-mr-auto"
+                                    id="btn"
+                                    onClick={this.handleSubmit}
+                                    type="submit">Log In
+                                </button>
                             </div>
-                        </div>
-                        <div className="form-group ">
-                            <div className="col-7"></div>
-                            <button
-                                className="btn btn-primary col-1 col-mr-auto"
-                               
-                                onClick={this.handleSubmit}
-                                type="submit">Login</button>
-                        </div>
-                    </form>
+                        </form>
+                        <hr></hr>
+                        <p class="section-register-footer">
+                        <span>Don't have an account? </span>
+                        <a id="signUpLink" href="/account/Register">Sign Up</a>
+                        </p>
+                    </Container>
                 </div>
             )
         }

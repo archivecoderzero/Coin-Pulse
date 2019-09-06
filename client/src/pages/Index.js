@@ -13,8 +13,6 @@ import './style.css';
 import Signup from './Signup';
 
 
-var d3 = require('d3');
-
 class Index extends Component {
 
   componentDidMount() {
