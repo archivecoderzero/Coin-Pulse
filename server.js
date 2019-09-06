@@ -22,7 +22,7 @@ const user = require('./routes')
 // app.use(express.static(__dirname + './client/public'));
 
 app.get("/", function(req, res) {
-	res.json(path.join(__dirname, "public/index.html"));
+	res.json(path.join(__dirname, "client/public/index.html"));
   });
 
 
