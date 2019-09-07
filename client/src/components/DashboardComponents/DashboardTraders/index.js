@@ -37,7 +37,7 @@ class DashboardTraders extends Component {
 
   render() {
     return (
-      <div style={{ height: 400,  paddingTop: 120, marginTop:60, textAlign: "center" }} className="jumbotron">
+      <div style={{ height: 500,  paddingTop: 120, marginTop:60, textAlign: "center" }} className="jumbotron">
         <h3>New Traders:</h3>
           <ul>
             <li>{this.state.trader1}</li>

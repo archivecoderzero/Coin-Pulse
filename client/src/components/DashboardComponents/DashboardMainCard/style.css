@@ -11,7 +11,7 @@ body {
 } */
 
 #chartsDiv {
-    padding-top: 30px;
+    padding-top: 80px;
 }
 
 #chartBtn1 {
@@ -25,5 +25,9 @@ body {
 }
 
 a:visited {
+    color:white !important;
+}
+
+a {
     color:white !important;
 }
