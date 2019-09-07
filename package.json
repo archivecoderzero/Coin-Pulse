@@ -37,6 +37,7 @@
     "express-session": "^1.16.2",
     "if-env": "^1.0.4",
     "immutability-helper": "^2.9.1",
+    "mongodb": "^3.3.2",
     "mongoose": "^5.3.16",
     "morgan": "^1.9.1",
     "node-uuid": "^1.4.8",

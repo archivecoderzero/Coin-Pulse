@@ -8,6 +8,7 @@ const morgan = require('morgan');
 const session = require('express-session');
 const mongoose = require('mongoose')
 const MongoStore = require('connect-mongo')(session)
+const MongoClient = require('mongodb').MongoClient;
 const passport = require('./passport');
 var cors = require('cors');
 const app = express();
@@ -43,18 +44,6 @@ app.use(
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
-
-// <---------------------------not sure if this is needed------------->
-// Sessions
-// app.use(
-// 	session({
-// 		secret: 'fraggle-rock', //pick a random string to make the hash that is generated secure
-// 		store: new MongoStore({ mongooseConnection: dbConnection }),
-// 		resave: false, //required
-// 		saveUninitialized: false //required
-// 	})
-// )
 
 
 app.use(cors());
@@ -115,10 +104,11 @@ function startSocket(server) {
 
 //mongoose.Promise = global.Promise
 
-//your local database url
-//27017 is the default mongoDB port
+// your local database url
+// 27017 is the default mongoDB port
 
-const uri =  process.env.MONGODB_URI || 'mongodb://localhost:27017/coin-pulse'
+const uri = 'mongodb://heroku_8zklrb8g:i970h7olhftopcht9ner55j071@ds211708.mlab.com:11708/heroku_8zklrb8g' || process.env.MONGODB_URI;
+
 mongoose.connect(uri).then(
 	() => {
 		/** ready to use. The `mongoose.connect()` promise resolves to undefined. */
@@ -130,6 +120,16 @@ mongoose.connect(uri).then(
 		console.log(err);
 	}
 );
+
+
+// const uri = "mongodb+srv://alexmongo:PYKuCj@4Cw@2tEt@cluster0-wrwod.mongodb.net/test?retryWrites=true&w=majority";
+
+// const client = new MongoClient(uri, { useNewUrlParser: true });
+// client.connect(err => {
+//   const collection = client.db("test").collection("devices");
+//   // perform actions on the collection object
+//   client.close();
+// });
 
 
 
