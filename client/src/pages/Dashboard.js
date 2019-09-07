@@ -30,6 +30,16 @@ class Dashboard extends Component {
           <Col size="md-4">
             <DashboardAsideLeft>
               <h3>Trending Articles</h3>
+              <p>Bitcoin Warning As Serious Security Vulnerabilities Uncovered
+              <a href="https://www.forbes.com/sites/billybambrough/2019/09/01/bitcoin-warning-as-serious-security-vulnerabilities-uncovered/#4aac38c938f1" onClick={this.handleClick} style={{cursor: 'pointer', backgroundColor: "rgb(0, 51, 99)"}}>Read more!</a>
+              </p>
+              <p>You don’t need brilliant financial analysis skills to notice that Bitcoin is in a bubble. It has grown in value from about 39 cents to over $18,000 in just eight years and recently attracted broad media attention by doubling in just a few days.
+              <a href="https://www.nytimes.com/2017/12/18/opinion/bitcoin-boom-technology-trust.html" onClick={this.handleClick} style={{cursor: 'pointer', backgroundColor: "rgb(0, 51, 99)"}}>Read more!</a>
+              </p>
+              <p>Money, blockchains, and social scalability
+              <a href="http://unenumerated.blogspot.com/2017/02/money-blockchains-and-social-scalability.html" onClick={this.handleClick} style={{cursor: 'pointer', backgroundColor: "rgb(0, 51, 99)"}}>Read more!</a>
+              </p>
+              
             </DashboardAsideLeft>
           </Col>
 
