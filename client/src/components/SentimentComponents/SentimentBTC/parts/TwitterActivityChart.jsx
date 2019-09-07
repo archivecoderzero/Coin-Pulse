@@ -86,7 +86,7 @@ var TwitterActivityChart = createReactClass({
   render: function() {
     return(
       <div className="twitter-activity">
-        <h4>Twitter Activity</h4>
+        <h4>Bitcoin Sentiment</h4>
         <LineChart binnedTweets={ this.props.binnedTweets }
           { ...chartProps }
           { ...chartArea }

@@ -17,20 +17,15 @@ class SearchForm extends React.Component {
     this.props.emit('search', { keyword: keyword });
     this.props.initTimestamp({ initTimestamp: initTimestamp });
   }
-
   render() {
     return (
       <div style={mainSentinment}id="search-bar">
-
         <form className="input-group" action="javascript:void(0)" onSubmit={this.search.bind(this)}>
-          <Row>
-            <h3>Add a keyword modifier</h3>
-            <Col size="md-6">
+            <h3 className="add_mod" >Add Modifier </h3>
+
             <input id="search" ref="keyword" type="search" placeholder="Modifier"
               autoFocus="autofocus" className="form-control" />
-            <button id="submit" className="btn btn-primary" type="button" onClick={this.search.bind(this)}>Run Bitcoin Sentiment</button>
-            </Col>
-          </Row>
+            <button id="submit" className="btn btn-primary" type="button" onClick={this.search.bind(this)}>Check BTC Sentiment</button>
         </form>
       </div>
     );

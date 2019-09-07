@@ -3,6 +3,8 @@ import io from "socket.io-client";
 import update from "immutability-helper";
 import Search from "./Search.jsx";
 import Results from "./Results.jsx";
+import './default.css'
+import { ContainerChart, Col, Row } from "../../Grid";
 
 
 //App is the Main Container
@@ -160,6 +162,9 @@ class Sentiment extends React.Component {
   render() {
     return (
       <div>
+        <br></br>
+        <br></br>
+        <br></br>
         { this.state.search ? 
           <Results 
             collectedTweets={ this.state.collectedTweets }
@@ -168,6 +173,8 @@ class Sentiment extends React.Component {
             sentiment= { this.state.sentiment }
           /> : null }
         <Search emit={ this.emit } initTimestamp={ this.initTimestamp } />
+
+
       </div>
     );
   }
