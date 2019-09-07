@@ -6,6 +6,10 @@ import React from "react";
 export function Container({ fluid, children }) {
   return <div className={`container${fluid ? "-fluid" : ""}`}>{children}</div>;
 }
+export function ContainerChart({ fluid, children }) {
+  return <div style={{ backgroundColor: "rgba(228, 241, 254, 1)" ,opacity: "0.8" }}
+  className="ContentJtron"className={`container${fluid ? "-fluid" : ""}`}>{children}</div>;
+}
 
 // This Row component lets us use a bootstrap row without having to think about class names
 export function Row({ fluid, children }) {
