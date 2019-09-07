@@ -35,6 +35,10 @@ h1 {
     background: #eaeaea;
 }
 
+#policy {
+    background: white;
+}
+
 #policyTitle {
     font-size: 60px;
 }

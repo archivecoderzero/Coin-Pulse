@@ -1,14 +1,29 @@
-.jumbotron {
+/* .jumbotron {
     background-color: rgba(190, 207, 194, 0.445);
     width: 100%;
     padding-right: 5%;
     padding-left: 5%;
-    height: 650px;
-    padding-top: 10px;
     margin-top: 0px;
-    text-align: center;
 }
 
 body {
     background-color: purple;
+} */
+
+#chartsDiv {
+    padding-top: 30px;
+}
+
+#chartBtn1 {
+    background: rgb(0, 51, 99);
+}
+#chartBtn2 {
+    background: rgb(0, 51, 99);
+}
+#chartBtn3 {
+    background: rgb(0, 51, 99);
+}
+
+a:visited {
+    color:white !important;
 }

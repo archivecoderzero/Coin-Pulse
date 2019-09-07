@@ -6,7 +6,6 @@ import red from '@material-ui/core/colors/red';
 import { ContainerChart , Col , Row } from "../components/Grid";
 import ContentJtron from "../components/ContentJtron";
 import "./style.css";
-import background from './bg.jpg';
 
 const styles = theme => ({
   "chart-container": {
