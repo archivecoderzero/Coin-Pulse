@@ -1,7 +1,7 @@
 import React from "react";
 import io from "socket.io-client";
 import update from "immutability-helper";
-import Hero from "./Hero.jsx";
+import Search from "./Search.jsx";
 import Results from "./Results.jsx";
 
 
@@ -25,7 +25,6 @@ class Sentiment extends React.Component {
     this.initTimestamp = this.initTimestamp.bind(this);
   }
 
-  //Incoming Data from Server Handlers
   componentWillMount() {
     var self = this;
     this.socket = io.connect();
@@ -158,12 +157,9 @@ class Sentiment extends React.Component {
     }
   }
 
-  //Render the App!
   render() {
     return (
       <div>
-        <Hero emit={ this.emit } initTimestamp={ this.initTimestamp } />
-        
         { this.state.search ? 
           <Results 
             collectedTweets={ this.state.collectedTweets }
@@ -171,7 +167,7 @@ class Sentiment extends React.Component {
             totalTweets={ this.state.totalTweets }
             sentiment= { this.state.sentiment }
           /> : null }
-
+        <Search emit={ this.emit } initTimestamp={ this.initTimestamp } />
       </div>
     );
   }

@@ -1,12 +1,12 @@
 import React from "react";
-import App1 from "../components/SentimentComponents/SentimentLTC/Sentiment.jsx";
+import SentimentLTC from "../components/SentimentComponents/SentimentLTC/Sentiment.jsx";
 
 
 class Sentiment extends React.Component {
 
   render() {
     return (
-        <App1 />)
+        <SentimentLTC />)
       }}
 
 

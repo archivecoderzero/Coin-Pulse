@@ -1,6 +1,5 @@
 var React = require('react');
 var TweetList = require('./TweetList.jsx');
-var d3 = require('d3');
 var createReactClass = require('create-react-class');
 
 //TwitterStream Displays A List of All Twitter Messages as Cards
