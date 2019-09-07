@@ -5,7 +5,6 @@ const passport = require('../../passport')
 
 // checks if user has an account
 router.get('/', (req, res, next) => {
-    console.log('===== user!!======')
     console.log(req.user)
     if (req.user) {
         res.json({ user: req.user })

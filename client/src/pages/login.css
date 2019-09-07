@@ -45,9 +45,9 @@
     color: white;
 }
 
-#signUpLink {
-    color: white;
-    text-decoration: underline;
+.signUpLink {
+    color:white !important;
+    text-decoration: underline !important;
 }
 
 .section-register-footer {

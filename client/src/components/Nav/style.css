@@ -8,11 +8,10 @@
 }
 
 .App-header {
-  background-color: rgba(5, 34, 61, 0.486);
+  background-color: #222b33;
   height: 60px;
   padding: 20px;
   color: white;
-  position: fixed;
   top: 0;
   width: 100%;
   z-index: 1;
@@ -40,14 +39,18 @@
   float: left;
   margin: 0%;
 }
-
-#nav-container {
-  margin-bottom: 1rem;
-}
 .navbar-section {
   float: right;
   margin-bottom: 1rem;
 
+}
+
+.logo {
+  color:white;
+}
+
+.logo:visited {
+  color:white;
 }
 
 @keyframes App-logo-spin {

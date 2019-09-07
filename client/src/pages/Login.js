@@ -10,11 +10,8 @@ class Login extends Component {
         this.state = {
             username: '',
             password: '',
-            redirectTo: null,
-            modal: false
+            redirectTo: null
         }
-        // this.handleSubmit = this.handleSubmit.bind(this)
-        // this.handleChange = this.handleChange.bind(this)
   
     }
     handleChange = event => {
@@ -98,15 +95,11 @@ class Login extends Component {
                                     />
                                 </div>
                             </div>
-
-
-
-
                             <div id="rememberMeDiv" class="form-group form-group-accept">
                                 <div id="rememberMe">
                                     <input type="checkbox" ></input>
-                                    <span class="remember-me"> Remember me   | </span>
-                                    <a class="forgot-pwd" href="/Account/PasswordReset">Forgot password?</a>
+                                    <span className="remember-me"> Remember me   | </span>
+                                    <a className="forgot-pwd signUpLink" href="/Account/PasswordReset">Forgot password?</a>
                                 </div>
                             </div>
                             
@@ -120,9 +113,9 @@ class Login extends Component {
                             </div>
                         </form>
                         <hr></hr>
-                        <p class="section-register-footer">
+                        <p className="section-register-footer">
                         <span>Don't have an account? </span>
-                        <a id="signUpLink" href="/account/Register">Sign Up</a>
+                        <a class="signUpLink" href="/account/Register">Sign Up</a>
                         </p>
                     </Container>
                 </div>
