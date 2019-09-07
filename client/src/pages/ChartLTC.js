@@ -2,10 +2,10 @@ import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 import Chart from "../components/SentimentComponents/chart";
 import amber from '@material-ui/core/colors/amber';
-import red from '@material-ui/core/colors/red';
 import { ContainerChart , Col , Row } from "../components/Grid";
 import ContentJtron from "../components/ContentJtron";
 import "./style.css";
+import background from './bg.jpg';
 
 const styles = theme => ({
   "chart-container": {
@@ -13,7 +13,6 @@ const styles = theme => ({
     height: 400,
     width: "100%",
     primary: amber,
-    backgroundColor:red
   }
 });
 

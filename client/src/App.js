@@ -15,8 +15,13 @@ import ChartBTC from "./pages/ChartBTC";
 import ChartLTC from "./pages/ChartLTC";
 import ChartETH from "./pages/ChartETH";
 
-import Sentiment from "./pages/Sentiment";
 
+// SENTIMENTS
+import SentimentBTC from "./pages/SentimentBTC";
+import SentimentLTC from "./pages/SentimentLTC";
+import SentimentETH from "./pages/SentimentETH";
+
+// MISC
 import NoMatch from "./pages/NoMatch";
 import Signup from './pages/Signup'
 import Login from './pages/Login'
@@ -67,8 +72,6 @@ class App extends Component {
       }
     })
   }
-
-
   render() {
     return (
       <Router>
@@ -120,8 +123,6 @@ class App extends Component {
             />
             {/* Chart FOR ETH END-------->>>*/}
 
-
-
             {/* Chart FOR LTC START-------->>>*/}
             <Route exact path="/chart/ltc" render={this.state.loggedIn ?
               (
@@ -136,18 +137,51 @@ class App extends Component {
             />
             {/* Chart FOR LTC END-------->>>*/}
 
-
-            <Route exact path="/sentiment" render={this.state.loggedIn ?
+            {/* SENTIMENT FOR BTC START-------->>>*/}
+            <Route exact path="/sentiment/btc" render={this.state.loggedIn ?
               (
                 // TERNARY EXPRESSION 
-                () => <Sentiment />
+                () => <SentimentBTC />
               ) : (
-                () => <Sentiment />
+                () => <SentimentBTC />
                 // UNCOMMENT WHEN ROUTES FIXED -- > START
                 // <Login updateUser={this.updateUser}/>
                 // UNCOMMENT WHEN ROUTES FIXED -- > END
               )}
             />
+            {/* SENTIMENT FOR BTC END-------->>>*/}
+
+
+            {/* SENTIMENT FOR LTC START-------->>>*/}
+            <Route exact path="/sentiment/ltc" render={this.state.loggedIn ?
+              (
+                // TERNARY EXPRESSION 
+                () => <SentimentLTC />
+              ) : (
+                () => <SentimentLTC />
+                // UNCOMMENT WHEN ROUTES FIXED -- > START
+                // <Login updateUser={this.updateUser}/>
+                // UNCOMMENT WHEN ROUTES FIXED -- > END
+              )}
+            />
+            {/* SENTIMENT FOR LTC END-------->>>*/}
+
+            {/* SENTIMENT FOR ETH START-------->>>*/}
+            <Route exact path="/sentiment/eth" render={this.state.loggedIn ?
+              (
+                // TERNARY EXPRESSION 
+                () => <SentimentETH />
+              ) : (
+                () => <SentimentETH />
+                // UNCOMMENT WHEN ROUTES FIXED -- > START
+                // <Login updateUser={this.updateUser}/>
+                // UNCOMMENT WHEN ROUTES FIXED -- > END
+              )}
+            />
+            {/* SENTIMENT FOR ETH END-------->>>*/}
+
+
+
             <Route component={NoMatch} />
           </Switch>
           <Footer />
