@@ -40,7 +40,7 @@ class Navbar extends Component {
                       <div className="col-1">
                             <div id="top-filler"></div>
                             <Link to="/dashboard" className="navbar-brand logo" >
-                            Satoshi-Pulse <i className="fab fa-bitcoin"></i>
+                            Satoshi-Pulse <i className="fab fa-dollar-sign"></i>
                             </Link>
                         </div>
                          <div className="col-1">
