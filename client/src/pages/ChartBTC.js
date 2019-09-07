@@ -143,12 +143,16 @@ class App extends React.Component {
 <Col size="md-1">
 </Col>
 <Col size="md-3" >
-<h4 style={infoStyle} >Market Cap :<span style={spanStyleRed} > $186,244,674,747 USD</span></h3>
-<h4 style={infoStyle} >Circulating Supply :<span style={spanStyleGreen} > 17,920,125 BTC</span></h3>
-<h4 style={infoStyle} >Max Supply :<span style={spanStyleBlue} > 21,000,000 BTC</span></h3>
+<h5 style={infoStyle} >Ranking  :<span style={spanStyleRed} > #1</span></h5>
+<h5 style={infoStyle} >Market Cap :<span style={spanStyleRed} > $186,244,674,747 USD</span></h5>
+<h5 style={infoStyle} >Circulating Supply :<span style={spanStyleGreen} > 17,920,125 BTC</span></h5>
+<h5 style={infoStyle} >Max Supply :<span style={spanStyleBlue} > 21,000,000 BTC</span></h5>
+<h5 style={infoStyle} >All Time High :<span style={spanStyleGreen} > $20,089.00</span></h5>
 </Col>
-<Col size="md-5" >
-<h5 style={infoStyle} >Bitcoin (BTC) is a consensus network that enables a new payment system and a completely digital currency. Powered by its users, it is a peer to peer payment network that requires no central authority to operate. On October 31st, 2008, an individual or group of individuals operating under the pseudonym "Satoshi Nakamoto" published the Bitcoin Whitepaper and described it as: "a purely peer-to-peer version of electronic cash, which would allow online payments to be sent directly from one party to another without going through a financial institution."</h5>
+<Col size="md-7" >
+<h4 style={infoStyle} >Bitcoin (BTC) is a consensus network that enables a new payment system and a completely digital currency. Powered by its users, it is a peer to peer payment network that requires no central authority to operate. On October 31st, 2008, an individual or group of individuals operating under the pseudonym "Satoshi Nakamoto" published the Bitcoin Whitepaper and described it as: "a purely peer-to-peer version of electronic cash, which would allow online payments to be sent directly from one party to another without going through a financial institution."</h4>
+</Col>
+<Col size="md-1">
 </Col>
 </Row>
 </ContentJtron>
