@@ -108,6 +108,7 @@ function startSocket(server) {
 // 27017 is the default mongoDB port
 
 const uri = 'mongodb://heroku_8zklrb8g:i970h7olhftopcht9ner55j071@ds211708.mlab.com:11708/heroku_8zklrb8g' || process.env.MONGODB_URI;
+
 mongoose.connect(uri).then(
 	() => {
 		/** ready to use. The `mongoose.connect()` promise resolves to undefined. */
