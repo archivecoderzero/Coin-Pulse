@@ -202,7 +202,7 @@
 /* line 619, default.scss */
 .results .stream {
   height: 700px;
-  background-color: black;
+  background-color:none;
   padding: 0 25px 0 15px;
 }
 /* line 624, default.scss */

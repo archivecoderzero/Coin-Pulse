@@ -2,12 +2,7 @@ import { ContainerChart, Col, Row } from "../../../Grid";
 var React = require('react');
 var ReactDOM = require('react-dom');
 
-const mainSentinment = {
-  padding:2,
-  border:3,
-  opacity:0.9,
-  textAlign: "center"
-};
+
 
 class SearchForm extends React.Component {
   search() {
@@ -19,10 +14,8 @@ class SearchForm extends React.Component {
   }
   render() {
     return (
-      <div style={mainSentinment}id="search-bar">
+      <div id="search-bar">
         <form className="input-group" action="javascript:void(0)" onSubmit={this.search.bind(this)}>
-            <h3 className="add_mod" >Add Modifier </h3>
-
             <input id="search" ref="keyword" type="search" placeholder="Modifier"
               autoFocus="autofocus" className="form-control" />
             <button id="submit" className="btn btn-primary" type="button" onClick={this.search.bind(this)}>Check BTC Sentiment</button>

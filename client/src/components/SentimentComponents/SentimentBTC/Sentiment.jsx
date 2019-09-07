@@ -162,9 +162,7 @@ class Sentiment extends React.Component {
   render() {
     return (
       <div>
-        <br></br>
-        <br></br>
-        <br></br>
+          <Search emit={ this.emit } initTimestamp={ this.initTimestamp } />
         { this.state.search ? 
           <Results 
             collectedTweets={ this.state.collectedTweets }
@@ -172,10 +170,8 @@ class Sentiment extends React.Component {
             totalTweets={ this.state.totalTweets }
             sentiment= { this.state.sentiment }
           /> : null }
-        <Search emit={ this.emit } initTimestamp={ this.initTimestamp } />
-
-
       </div>
+
     );
   }
 }
