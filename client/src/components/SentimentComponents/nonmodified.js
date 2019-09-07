@@ -39,6 +39,7 @@ class Sentiment extends React.Component {
     });
   }
 
+  
   //Outgoing Data to Server Handler
   emit(eventName, payload) {
     this.socket.emit(eventName, payload);
