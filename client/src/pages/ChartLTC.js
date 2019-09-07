@@ -37,6 +37,8 @@ const spanStyleBlue = {
 const ContianerChartStyle = {
   padding:2,
   border:3,
+  backgroundColor:"grey",
+  opacity:0.9
 };
 
 
