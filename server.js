@@ -117,7 +117,8 @@ function startSocket(server) {
 
 //your local database url
 //27017 is the default mongoDB port
-const uri = 'mongodb://localhost:27017/coin-pulse' || process.env.MONGODB_URI;
+
+const uri =  process.env.MONGODB_URI || 'mongodb://localhost:27017/coin-pulse'
 mongoose.connect(uri).then(
 	() => {
 		/** ready to use. The `mongoose.connect()` promise resolves to undefined. */
