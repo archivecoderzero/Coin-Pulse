@@ -32,9 +32,6 @@ const spanStyleBlue = {
   color: "blue"
 };
 
-
-
-
 const infoStyleMain = {
   textAlign:"center",
   fontSize:50,
@@ -55,8 +52,8 @@ class App extends React.Component {
       datasets: [
         {
           type: "line",
-          label: "BTC-USD",
-          backgroundColor: "rgba(245, 171, 53, 1)",
+          label: "ETH-USD",
+          backgroundColor: "rgba(89, 171, 227, 1)",
           border: 0,
           borderColor: this.props.theme.palette.primary,
           pointBackgroundColor: this.props.theme.palette,
@@ -92,7 +89,7 @@ class App extends React.Component {
       channels: [
         {
           name: "ticker",
-          product_ids: ["BTC-USD"]
+          product_ids: ["ETH-USD"]
         }
       ]
     };
@@ -128,7 +125,7 @@ class App extends React.Component {
         <br></br>
         <br></br>       
         <br></br>
-        <h1>Bitcoin Chart</h1> 
+        <h1>Ethereum Chart</h1> 
         <Container>
       <div className={classes["chart-container"]}>
         <Chart
@@ -138,19 +135,21 @@ class App extends React.Component {
 </div>
 </Container>
 <ContentJtron style={ContentJtronStyle}>
-<h2 style={infoStyleMain}  >Bitcoin </h2>
+<h2 style={infoStyleMain}  >Ethereum </h2>
 <Row>
 <Col size="md-1">
 </Col>
 <Col size="md-3" >
-<h5 style={infoStyle} >Ranking  :<span style={spanStyleRed} > #1</span></h5>
-<h5 style={infoStyle} >Market Cap :<span style={spanStyleRed} > $186,244,674,747 USD</span></h5>
-<h5 style={infoStyle} >Circulating Supply :<span style={spanStyleGreen} > 17,920,125 BTC</span></h5>
-<h5 style={infoStyle} >Max Supply :<span style={spanStyleBlue} > 21,000,000 BTC</span></h5>
-<h5 style={infoStyle} >All Time High :<span style={spanStyleGreen} > $20,089.00</span></h5>
+<h5 style={infoStyle} >Ranking  :<span style={spanStyleBlue} > #2</span></h5>
+<h5 style={infoStyle} >Market Cap :<span style={spanStyleRed} > $18,302,709,200 USD</span></h5>
+<h5 style={infoStyle} >Circulating Supply :<span style={spanStyleGreen} > 107,638,016 ETH</span></h5>
+<h5 style={infoStyle} >Max Supply :<span style={spanStyleBlue} > No Data </span></h5>
+<h5 style={infoStyle} >All Time High :<span style={spanStyleGreen} > $1,432.88 USD</span></h5>
 </Col>
-<Col size="md-8" >
-<h4 style={infoStyle} >Bitcoin (BTC) is a consensus network that enables a new payment system and a completely digital currency. Powered by its users, it is a peer to peer payment network that requires no central authority to operate. On October 31st, 2008, an individual or group of individuals operating under the pseudonym "Satoshi Nakamoto" published the Bitcoin Whitepaper and described it as: "a purely peer-to-peer version of electronic cash, which would allow online payments to be sent directly from one party to another without going through a financial institution."</h4>
+<Col size="md-7" >
+<h4 style={infoStyle} >Ethereum is the pioneer for blockchain based smart contracts. When running on the blockchain a smart contract becomes like a self-operating computer program that automatically executes when specific conditions are met. On the blockchain, smart contracts allow for code to be run exactly as programmed without any possibility of downtime, censorship, fraud or third-party interference. It can facilitate the exchange of money, content, property, shares, or anything of value. The Ethereum network went live on July 30th, 2015 with 72 million Ethereum premined.</h4>
+</Col>
+<Col size="md-1">
 </Col>
 </Row>
 </ContentJtron>

@@ -89,6 +89,7 @@ class App extends Component {
               )}
             />
 
+
             {/* Chart FOR BITCOIN START-------->>>*/}
             <Route exact path="/chart/btc" render={this.state.loggedIn ?
               (
@@ -102,6 +103,38 @@ class App extends Component {
               )}
             />
             {/* Chart FOR BITCOIN END-------->>>*/}
+
+
+
+            {/* Chart FOR ETH START-------->>>*/}
+            <Route exact path="/chart/eth" render={this.state.loggedIn ?
+              (
+                // TERNARY EXPRESSION 
+                () => <ChartETH />
+              ) : (
+                () => <ChartETH />
+                // UNCOMMENT WHEN ROUTES FIXED -- > START
+                // <Login updateUser={this.updateUser}/>
+                // UNCOMMENT WHEN ROUTES FIXED -- > END
+              )}
+            />
+            {/* Chart FOR ETH END-------->>>*/}
+
+
+
+            {/* Chart FOR LTC START-------->>>*/}
+            <Route exact path="/chart/ltc" render={this.state.loggedIn ?
+              (
+                // TERNARY EXPRESSION 
+                () => <ChartLTC />
+              ) : (
+                () => <ChartLTC />
+                // UNCOMMENT WHEN ROUTES FIXED -- > START
+                // <Login updateUser={this.updateUser}/>
+                // UNCOMMENT WHEN ROUTES FIXED -- > END
+              )}
+            />
+            {/* Chart FOR LTC END-------->>>*/}
 
 
             <Route exact path="/sentiment" render={this.state.loggedIn ?
