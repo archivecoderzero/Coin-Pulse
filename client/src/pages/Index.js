@@ -5,13 +5,6 @@ import "./Image/Raphael.png";
 import "./Image/Zia.png";
 import "./style.css";
 
-// INDEX COMPONENT ----> START
-import MainCard from "../components/IndexComponents/MainCard";
-import AboutCard from "../components/IndexComponents/AboutCard";
-import DevsCard from "../components/IndexComponents/DevsCard";
-import SignupCard from "../components/IndexComponents/SignupCard";
-// INDEX COMPONENT ----> END
-
 import { Col, Row, Container } from "../components/Grid";
 import './index.css';
 

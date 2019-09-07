@@ -1,8 +1,11 @@
 import React, { Component } from "react";
 import CryptoCard from "../CryptoCard";
 import { Col, Row } from "../../Grid";
-
+import Button from "react-bootstrap/Button";
+import "./style.css"
 import axios from 'axios'
+import { Link } from 'react-router-dom'
+
 
 class DashboardMainCard extends Component {
 
@@ -93,19 +96,8 @@ class DashboardMainCard extends Component {
   render() {
     const array = ["bitcoin", "ethereum", "litecoin"];
       return (
-        <div className="jumbotron">
+        <div id="chartsDiv">
           <Row>
-            <Col size="md-4 sm-12">
-              <CryptoCard
-                currencyName='Bitcoin'
-                currencyPrice={this.state.bitcoin.currentPrice}
-                icon={<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/2000px-Bitcoin.svg.png" alt="" />}
-                currencyShortName='BTC'
-                trend={this.state.bitcoin.price24h}
-                trendDirection={this.state.bitcoin.trendDirection}
-                chartData={this.state.bitcoin.priceHistory}
-              />
-            </Col>
             <Col size="md-4 sm-12">
               <CryptoCard
                 currencyName='Ethereum'
@@ -117,6 +109,22 @@ class DashboardMainCard extends Component {
                 chartData={this.state.ethereum.priceHistory}
                 chartColor='#9b59b6'
               />
+              <Button id="chartBtn1" variant="primary" type="button">
+              <Link to="/chart/eth">Click for Ethereum Sentiment</Link></Button>
+            </Col>
+            <Col size="md-4 sm-12">
+              <CryptoCard
+                currencyName='Bitcoin'
+                currencyPrice={this.state.bitcoin.currentPrice}
+                icon={<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/2000px-Bitcoin.svg.png" alt="" />}
+                currencyShortName='BTC'
+                trend={this.state.bitcoin.price24h}
+                trendDirection={this.state.bitcoin.trendDirection}
+                chartData={this.state.bitcoin.priceHistory}
+              />
+              <Button id="chartBtn2" variant="primary" type="button">
+                <Link to="/chart/btc">Click for Bitcoin Sentiment</Link>
+              </Button>
             </Col>
             <Col size="md-4 sm-12">
               <CryptoCard
@@ -127,8 +135,11 @@ class DashboardMainCard extends Component {
                 trend={this.state.litecoin.price24h}
                 trendDirection={this.state.litecoin.trendDirection}
                 chartData={this.state.litecoin.priceHistory}
-                chartColor='#ecf0f1'
+                chartColor='#4bffd5'
               />
+              <Button id="chartBtn3" variant="primary" type="button">
+                <Link to="/chart/ltc">Click for Litecoin Sentiment</Link>
+              </Button>
             </Col>
           </Row>
         </div>
