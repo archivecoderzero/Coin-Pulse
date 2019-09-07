@@ -3,7 +3,7 @@ import { withStyles } from "@material-ui/core/styles";
 import Chart from "../components/SentimentComponents/chart";
 import amber from '@material-ui/core/colors/amber';
 import red from '@material-ui/core/colors/red';
-import { Container , Col , Row } from "../components/Grid";
+import { ContainerChart , Col , Row } from "../components/Grid";
 import ContentJtron from "../components/ContentJtron";
 import "./style.css";
 import background from './bg.jpg';
@@ -19,7 +19,9 @@ const styles = theme => ({
 });
 
 const infoStyle = {
-  textAlign:"left"
+  textAlign:"left",
+  color:"white"
+
 };
 
 const spanStyleRed = {
@@ -48,6 +50,7 @@ const infoStyleMain = {
   fontSize:50,
   position: "relative",
   top: -100,
+  color:"white"
 };
 
 const ContentJtronStyle = {
@@ -137,14 +140,15 @@ class App extends React.Component {
         <br></br>       
         <br></br>
         <h1>Litecoin Chart</h1> 
-        <Container style={ContianerChartStyle}>
+        <ContainerChart style={ContianerChartStyle}>
       <div className={classes["chart-container"]}>
         <Chart
           data={this.state.lineChartData}
           options={this.state.lineChartOptions}
         />
 </div>
-</Container>
+</ContainerChart>
+<br></br>
 <ContentJtron style={ContentJtronStyle}>
 <h2 style={infoStyleMain}  >Litecoin </h2>
 <Row>
