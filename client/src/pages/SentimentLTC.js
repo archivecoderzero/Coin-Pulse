@@ -1,5 +1,5 @@
 import React from "react";
-import App1 from "../components/SentimentComponents/Sentiment.jsx";
+import App1 from "../components/SentimentComponents/SentimentLTC/Sentiment.jsx";
 
 
 class Sentiment extends React.Component {
