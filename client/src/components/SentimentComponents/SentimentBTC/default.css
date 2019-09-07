@@ -1,0 +1,301 @@
+/* Reusable Styles
+======================== */
+/* Results Section Styles
+======================== */
+.results {
+  height: 1000px;
+  /* Twitter Stream Styles
+  ======================== */
+}
+/* line 422, default.scss */
+.results .dashboard {
+  height: 700px;
+  background-color: none;
+  width: 100%;
+  /* Activity Chart Styles
+  ======================== */
+}
+/* line 427, default.scss */
+.results .dashboard h1 {
+  color: #4d4d4d;
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+/* line 436, default.scss */
+.results .dashboard .twitter-activity {
+  width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+/* line 442, default.scss */
+.results .dashboard .twitter-activity h4 {
+  margin-top: 20px;
+  margin-bottom: 0;
+  padding: 15px 5px 10px;
+  color: #4d4d4d;
+  border-radius: 5px 5px 0 0;
+  font-size: 20px;
+  text-align: center;
+  background-color: #b3b3b3;
+}
+/* line 453, default.scss */
+.results .dashboard .twitter-activity .line-chart {
+  background-color: #f7f7f7;
+  display: block;
+  margin: auto;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+/* line 459, default.scss */
+.results .dashboard .twitter-activity .line-chart .gridline path,
+.results .dashboard .twitter-activity .line-chart .gridline line {
+  fill: none;
+  stroke: #ccc;
+  shape-rendering: crispEdges;
+}
+/* line 466, default.scss */
+.results .dashboard .twitter-activity .line-chart .axis path,
+.results .dashboard .twitter-activity .line-chart .axis line {
+  fill: none;
+  stroke: #1a252f;
+  shape-rendering: crispEdges;
+}
+/* line 473, default.scss */
+.results .dashboard .twitter-activity .line-chart .axis text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+}
+/* line 478, default.scss */
+.results .dashboard .twitter-activity .line-chart .axis text.x-label,
+.results .dashboard .twitter-activity .line-chart .axis text.y-label {
+  font-family: "Open Sans", sans-serif;
+  fill: #999;
+}
+/* line 485, default.scss */
+.results .dashboard .twitter-activity .tweet-counters {
+  display: flex;
+  border-top: 1px solid #1a252f;
+}
+/* line 489, default.scss */
+.results .dashboard .twitter-activity .tweet-counters .total {
+  width: 100%;
+  position: relative;
+}
+/* line 493, default.scss */
+.results .dashboard .twitter-activity .tweet-counters .total h3 {
+  margin: 0;
+  padding: 10px 0;
+  color: #4d4d4d;
+  font-size: 14px;
+  text-align: center;
+  background-color: #d5d5d5;
+}
+/* line 502, default.scss */
+.results .dashboard .twitter-activity .tweet-counters .total .total-tweets {
+  height: 5px;
+  background-color: blue;
+}
+/* line 507, default.scss */
+.results .dashboard .twitter-activity .tweet-counters .total .total-positive {
+  height: 5px;
+  background-color: green;
+}
+/* line 512, default.scss */
+.results .dashboard .twitter-activity .tweet-counters .total .total-neutral {
+  height: 5px;
+  background-color: sandybrown;
+}
+/* line 517, default.scss */
+.results .dashboard .twitter-activity .tweet-counters .total .total-negative {
+  height: 5px;
+  background-color: red;
+}
+/* line 522, default.scss */
+.results .dashboard .twitter-activity .tweet-counters .total .counter {
+  padding: 5px 0;
+  color: #737373;
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  background-color: white;
+  transition: all 0.2s ease-in-out;
+}
+/* line 531, default.scss */
+.results .dashboard .twitter-activity .tweet-counters .total .counter.positive {
+  color: green;
+}
+/* line 536, default.scss */
+.results .dashboard .twitter-activity .tweet-counters .total .counter.neutral {
+  color: sandybrown;
+}
+/* line 540, default.scss */
+.results .dashboard .twitter-activity .tweet-counters .total .counter.negative {
+  color: red;
+}
+/* line 545, default.scss */
+.results .dashboard .twitter-activity .tweet-counters .total .total-tweets + .counter {
+  border-radius: 0 0 0 5px;
+}
+/* line 549, default.scss */
+.results .dashboard .twitter-activity .tweet-counters .total .total-negative + .counter {
+  border-radius: 0 0 5px 0;
+}
+/* line 553, default.scss */
+.results .dashboard .twitter-activity .tweet-counters .total .arrow {
+  position: absolute;
+  bottom: 20px;
+  right: 15px;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  transition: all 0.2s ease-in-out;
+}
+/* line 564, default.scss */
+.results .dashboard .twitter-activity .tweet-counters .total .arrow.positive {
+  border-bottom: 10px solid green;
+}
+/* line 568, default.scss */
+.results .dashboard .twitter-activity .tweet-counters .total .arrow.neutral, .results .dashboard .twitter-activity .tweet-counters .total .arrow.null {
+  border-bottom: 10px solid sandybrown;
+}
+/* line 573, default.scss */
+.results .dashboard .twitter-activity .tweet-counters .total .arrow.negative {
+  border-bottom: 10px solid red;
+}
+/* line 580, default.scss */
+.results .dashboard .twitter-activity .overall-sentiment {
+  margin-top: 30px;
+  display: inline-block;
+  background-color: #f7f7f7;
+  border-radius: 5px 5px 5px 5px;
+}
+/* line 586, default.scss */
+.results .dashboard .twitter-activity .overall-sentiment h3 {
+  display: inline-block;
+  padding: 10px 0 10px 10px;
+  margin: 0;
+  width: 220px;
+  font-size: 24px;
+  border-right: 1px solid ;
+  border-radius: 5px 0 0 5px;
+  background-color: #d5d5d5;
+}
+/* line 598, default.scss */
+.results .dashboard .twitter-activity .overall-sentiment p {
+  display: inline-block;
+  margin-bottom: 0;
+  padding: 0 10px;
+  font-size: 24px;
+  color: #666;
+}
+/* line 605, default.scss */
+.results .dashboard .twitter-activity .overall-sentiment p.positive {
+  color: green;
+}
+/* line 609, default.scss */
+.results .dashboard .twitter-activity .overall-sentiment p.negative {
+  color: red;
+}
+/* line 619, default.scss */
+.results .stream {
+  height: 700px;
+  background-color:none;
+  padding: 0 25px 0 15px;
+}
+/* line 624, default.scss */
+.results .stream h1 {
+  margin-bottom: 0;
+  padding: 15px 5px 10px;
+  color: "black";
+  border-radius: 5px 5px 0 0;     
+  font-size: 20px;
+  text-align: center;
+  background-color: #b3b3b3;
+}
+/* line 634, default.scss */
+.results .stream .tweet-list {
+  height: 600px;
+  background-color: #f7f7f7;
+  padding-bottom: 20px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+/* line 642, default.scss */
+.results .stream .tweet-list .tweet-card {
+  padding: 10px 0px 10px 15px;
+  margin: 5px 10px 5px 10px;
+  border-bottom: 1px solid #ccc;
+  background-color: white;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+/* line 649, default.scss */
+.results .stream .tweet-list .tweet-card .profile-image {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10px;
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+}
+/* line 658, default.scss */
+.results .stream .tweet-list .tweet-card .content {
+  display: inline-block;
+  width: 80%;
+  position: relative;
+}
+/* line 663, default.scss */
+.results .stream .tweet-list .tweet-card .content .user {
+  display: inline-block;
+  width: 90%;
+}
+/* line 667, default.scss */
+.results .stream .tweet-list .tweet-card .content .user .name {
+  font-size: 14px;
+  color: #4d4d4d;
+  font-weight: 700;
+  margin-right: 10px;
+}
+/* line 674, default.scss */
+.results .stream .tweet-list .tweet-card .content .user .username {
+  font-size: 14px;
+}
+/* line 679, default.scss */
+.results .stream .tweet-list .tweet-card .content .sentiment {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  display: inline-block;
+}
+/* line 685, default.scss */
+.results .stream .tweet-list .tweet-card .content .sentiment.positive {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid green;
+}
+/* line 693, default.scss */
+.results .stream .tweet-list .tweet-card .content .sentiment.neutral, .results .stream .tweet-list .tweet-card .content .sentiment.null {
+  height: 10px;
+  width: 10px;
+  margin-right: 5px;
+  border-radius: 50%;
+  background-color: sandybrown;
+}
+/* line 703, default.scss */
+.results .stream .tweet-list .tweet-card .content .sentiment.negative {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid red;
+}
+/* line 712, default.scss */
+.results .stream .tweet-list .tweet-card .content .text {
+  font-size: 12px;
+}
+

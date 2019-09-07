@@ -8,7 +8,7 @@ var createReactClass = require('create-react-class');
 var Dashboard = createReactClass({
   render: function() {
     return (
-      <div className="dashboard col-sm-8">
+      <div className="dashboard col-sm-12">
         <TwitterActivityChart
           binnedTweets={ this.props.binnedTweets }
           totalTweets={ this.props.totalTweets }
