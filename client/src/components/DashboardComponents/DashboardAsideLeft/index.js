@@ -3,7 +3,7 @@ import React from "react";
 function DashboardAsideLeft({ children }) {
   return (
     <div
-      style={{ height: 700,  paddingTop: 120, marginTop:60, textAlign: "center" }}
+      style={{ height: 400,  paddingTop: 120, marginTop:60, textAlign: "center" }}
       className="jumbotron"
     >
       {children}

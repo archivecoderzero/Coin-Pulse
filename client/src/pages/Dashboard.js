@@ -2,14 +2,15 @@ import React, { Component } from "react";
 import { Col, Row, Container } from "../components/Grid";
 import DashboardMainCard from "../components/DashboardComponents/DashboardMainCard"
 import DashboardAsideLeft from "../components/DashboardComponents/DashboardAsideLeft"
-import DashboardAsideRight from "../components/DashboardComponents/DashboardAsideRight"
+import DashboardTraders from "../components/DashboardComponents/DashboardTraders"
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import "./dashboard.css";
+
 
 class Dashboard extends Component {
 
   state = {
-
 
   }
 
@@ -19,7 +20,7 @@ class Dashboard extends Component {
 
   render() {
     return (
-
+      <div id="bodyDashboard">
       <Container fluid>
         <DashboardMainCard />
 
@@ -33,22 +34,12 @@ class Dashboard extends Component {
           </Col>
 
           <Col size="md-4">
-            <DashboardAsideRight>
-              <h3>Top Traders : </h3>
-              <ul>
-                <li>Trader 1 : 99% Success Rate : 10000 Bit Points </li>
-                <li>Trader 2 : 99% Success Rate : 10000 Bit Points </li>
-                <li>Trader 3 : 99% Success Rate : 10000 Bit Points </li>
-                <li>Trader 4 : 99% Success Rate : 10000 Bit Points </li>
-                <li>Trader 5 : 99% Success Rate : 10000 Bit Points </li>
-                <li>Trader 6 : 99% Success Rate : 10000 Bit Points </li>
-                <li>Trader 7 : 99% Success Rate : 10000 Bit Points </li>
-                <li>Trader 8 : 99% Success Rate : 10000 Bit Points </li>
-              </ul>
-            </DashboardAsideRight>
+            <DashboardTraders>
+
+            </DashboardTraders>
           </Col>
           <Col size="md-4">
-            <DashboardAsideRight>
+            <DashboardAsideLeft>
               <h3>Search</h3>
               <Form>
                 <Form.Group controlId="Search">
@@ -62,10 +53,11 @@ class Dashboard extends Component {
                 </Button>
                 </Form.Group>
               </Form>
-            </DashboardAsideRight>
+            </DashboardAsideLeft>
           </Col>
         </Row>
       </Container>
+    </div>
     );
   }
 }
