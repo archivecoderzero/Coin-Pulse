@@ -49,8 +49,9 @@ const infoStyleMain = {
   color:"white"
 
 };
-
 const ContentJtronStyle = {
+  color:"rgba(245, 171, 53, 1)",
+  fontSize:75,
 }
 
 
@@ -136,7 +137,7 @@ class App extends React.Component {
         <br></br>
         <br></br>       
         <br></br>
-        <h1>Bitcoin Chart</h1> 
+        <h1 style={ContentJtronStyle}>Bitcoin Chart</h1> 
         <ContainerChart style={ContianerChartStyle}>
       <div className={classes["chart-container"]}>
         <Chart
