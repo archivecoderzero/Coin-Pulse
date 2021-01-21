@@ -49,7 +49,7 @@
     "request": "^2.88.0",
     "request-promise": "^4.2.4",
     "sentiment": "^1.0.6",
-    "socket.io": "^1.7.4",
+    "socket.io": "^2.4.0",
     "socket.io-client": "^1.7.4",
     "spectre.css": "^0.5.8",
     "twit": "^2.2.11",
